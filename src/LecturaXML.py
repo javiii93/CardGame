@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ALL
 tree = ALL.parse('xml_dtd/myBaraja.xml')
 rootPlayer = tree.getroot()
-tree2=ALL.parse('xml_dtd/enemigo.xml')
+tree2=ALL.parse('xml_dtd/Enemigo.xml')
 rootEnemy=tree2.getroot()
 #https://docs.python.org/2/library/xml.etree.elementtree.html
 
