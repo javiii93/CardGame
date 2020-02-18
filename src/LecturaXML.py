@@ -6,7 +6,7 @@ rootEnemy=tree2.getroot()
 #https://docs.python.org/2/library/xml.etree.elementtree.html
 
 def cardsPrint(arg):
-   for card in rootPlayer.findall('./deck/card'):
+   for card in arg.findall('./deck/card'):
       att=card.attrib
       name = card.find('name').text
       desc=card.find('description').text
