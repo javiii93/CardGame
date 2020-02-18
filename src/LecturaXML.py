@@ -14,5 +14,12 @@ def cardsPrint(arg):
       defense=card.find('defense').text
       print(att,"Name=",name,"Description=",desc,"Attack=",attack,"Defense=",defense)
 
+def treeLoad(arg):
+   if(arg is None):
+      return print("Can't load tree")
+   else:
+      return print("Load tree succesfully")
+
 cardsPrint(rootPlayer)
 cardsPrint(rootEnemy)
+treeLoad(rootPlayer)
