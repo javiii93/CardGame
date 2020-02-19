@@ -1,53 +1,60 @@
 import sys  # this allows you to use the sys.exit command to quit/logout of the application
-import os # This allows you to call files
+import os # This allows you to call out files
 
 
 #Funciones
-def case_1():
-   print ("Cargar cartas")
+#Function to clear screen in unix/lin/mac/bsd and win platforms
+def borrarPantalla(): 
+    if os.name == "posix":
+        os.system ("clear")
+    elif os.name == "ce" or os.name == "nt" or os.name == "dos":
+        os.system ("cls")
 
+def case_1():
+    print ("Cargar cartas")
+    borrarPantalla()
 def case_2():
     print ("Cargar cartas enemigo")
-
+    borrarPantalla()
 def case_3():
     print ("Crear mazo aleatorio")
-
+    borrarPantalla()
 def case_4():
     print ("Crear mazo ofensivo")
-
+    borrarPantalla()
 def case_5():
     print ("Crear mazo defensivo")
-
+    borrarPantalla()
 def case_6():
     print ("Crear mazo equilibrado")
-
+    borrarPantalla()
 def case_7():
     print ("Crear mazo aleatorio Enemigo")
-
+    borrarPantalla()
 def case_8():
     print ("Crear mazo ofensivo Enemigo")
-
+    borrarPantalla()
 def case_9():
     print ("Crear mazo defensivo Enemigo")
-
+    borrarPantalla()
 def case_10():
     print ("Crear mazo equilibrado Enemigo")
-
+    borrarPantalla()
 def case_11():
     print ("Luchar jugador vs jugador")
-
+    borrarPantalla()
 def case_12():
     print ("Luchar jugador vs Bot(Arcade)")
-
+    borrarPantalla()
 def case_13():
     print ("Luchar jugador vs Bot (Lliga)")
-
+    borrarPantalla()
 def case_14():
     print ("Bye Bye")
-
+    borrarPantalla()
 def default():
-    print ("Incorrect option")
-
+    print ("Incorrect option. Try again!")
+    borrarPantalla()
 
 
 print("MENU PRINCIPAL")
@@ -85,7 +92,7 @@ elif opt == 7:
     case_7()
 elif opt == 8:
     case_8()
-if opt == 9:
+elif opt == 9:
     case_9()
 elif opt == 10:
     case_10()
