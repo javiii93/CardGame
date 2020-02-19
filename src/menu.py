@@ -1,3 +1,5 @@
+
+
 import sys  # this allows you to use the sys.exit command to quit/logout of the application
 import os  # This allows you to call files
 import xml.etree.ElementTree as ALL
@@ -14,13 +16,20 @@ rootEnemy = tree2.getroot()
 
 def case_1():
     try:
-        LecturaXML.treeLoad(rootEnemy)
+        print("\nCARGAR CARTAS PLAYER")
+        print("*********************************\n")
+        LecturaXML.treeLoad(rootPlayer)
     except:
         print("Can't load tree")
 
 
 def case_2():
-    print("Cargar cartas enemigo")
+    try:
+        print("\nCARGAR CARTAS ENEMIGO/n")
+        print("*********************************\n")
+        LecturaXML.treeLoad(rootEnemy)
+    except:
+        print("Can't load tree")
 
 
 def case_3():
@@ -76,13 +85,16 @@ def default():
 
 
 def menu_principal():
-    print("MENU PRINCIPAL")
+    print("\nMENU PRINCIPAL")
+    print("*********************************\n")
     print("1. Cargar cartas")
     print("2. Carga cartas Enemigo")
     print("14. Salir")
 
 
 def menu_crear_mazo():
+    print("\nMENU CREAR MAZO")
+    print("*********************************\n")
     print("3. Crear mazo aleatorio")
     print("4. Crear mazo ofensivo")
     print("5. Crear mazo defensivo")
@@ -90,6 +102,8 @@ def menu_crear_mazo():
 
 
 def menu_crear_mazo_enemigo():
+    print("\nMENU CREAR MAZO ENEMIGO")
+    print("*********************************\n")
     print("7. Crear mazo aleatorio Enemigo")
     print("8. Crear mazo ofensivo Enemigo")
     print("9. Crear mazo defensivo Enemigo")
@@ -97,6 +111,8 @@ def menu_crear_mazo_enemigo():
 
 
 def menu_combate():
+    print("\nMENU COMBATE")
+    print("*********************************\n")
     print("11. Luchar Jugador vs Jugador")
     print("12. Luchar Jugador vs Bot (arcade)")
     print("13. Luchar Jugador vs Bot (liga)")
@@ -108,28 +124,34 @@ while opt != 14:
 
     menu_principal()
     try:
+        print("*********************************")
         opt = int(input("Introduzca su opción: "))
 
         if opt == 1:
             case_1()
+            #Menu mi mazo
             while opt < 3 or opt > 6:
                 menu_crear_mazo()
+                print("*********************************")
                 opt = int(input("Introduzca su opción: "))
-
+            #Opt crear mazos mybaraja
             if opt == 3:
                 case_3()
             elif opt == 4:
                 case_4()
             elif opt == 5:
                 case_5()
+            elif opt == 6:
+                case_6()
 
         elif opt == 2:
             case_2()
-
+            #Menu mazo enemigo
             while opt < 7 or opt > 11:
                 menu_crear_mazo_enemigo()
+                print("*********************************")
                 opt = int(input("Introduzca su opción: "))
-
+                #Opt crear mazos enemigos
                 if opt == 7:
                     case_7()
                 elif opt == 8:
@@ -139,31 +161,17 @@ while opt != 14:
                 elif opt == 10:
                     case_10()
 
-        elif opt == 3:
-            case_3()
-        elif opt == 4:
-            case_4()
-        elif opt == 5:
-            case_5()
-        elif opt == 6:
-            case_6()
-        elif opt == 7:
-            case_7()
-        elif opt == 8:
-            case_8()
-        elif opt == 9:
-            case_9()
-        elif opt == 10:
-            case_10()
+        ##Si mazos creados correctamente Menu combate
         elif opt == 11:
             case_11()
         elif opt == 12:
             case_12()
         elif opt == 13:
             case_13()
+        #Opt salir y default
         elif opt == 14:
             case_14()
         else:
             default()
     except:
-        print("Opcion incorrecta.")
+        print("Error. Introduce un número!")
