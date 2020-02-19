@@ -15,7 +15,7 @@ def case_1():
         print("\nCARGAR CARTAS PLAYER")
         print("*********************************\n")
         LecturaXML.treeLoad(rootPlayer)
-    except:
+    except NameError:
         print("Can't load tree")
 
 
@@ -24,7 +24,7 @@ def case_2():
         print("\nCARGAR CARTAS ENEMIGO/n")
         print("*********************************\n")
         LecturaXML.treeLoad(rootEnemy)
-    except:
+    except NameError:
         print("Can't load tree")
 
 
@@ -125,12 +125,13 @@ while opt != 14:
 
         if opt == 1:
             case_1()
-            #Menu mi mazo
+            # Menu create player deck
             while opt < 3 or opt > 6:
                 menu_crear_mazo()
                 print("*********************************")
                 opt = int(input("Introduzca su opción: "))
-            #Opt crear mazos mybaraja
+
+            # Opt create player deck
             if opt == 3:
                 case_3()
             elif opt == 4:
@@ -142,12 +143,12 @@ while opt != 14:
 
         elif opt == 2:
             case_2()
-            #Menu mazo enemigo
+            # Menu enemy deck
             while opt < 7 or opt > 11:
                 menu_crear_mazo_enemigo()
                 print("*********************************")
                 opt = int(input("Introduzca su opción: "))
-                #Opt crear mazos enemigos
+                # Opt crear mazos enemigos
                 if opt == 7:
                     case_7()
                 elif opt == 8:
@@ -157,17 +158,17 @@ while opt != 14:
                 elif opt == 10:
                     case_10()
 
-        ##Si mazos creados correctamente Menu combate
+        # Opt to fight
         elif opt == 11:
             case_11()
         elif opt == 12:
             case_12()
         elif opt == 13:
             case_13()
-        #Opt salir y default
+        # Opt to exit and default
         elif opt == 14:
             case_14()
         else:
             default()
-    except:
+    except NameError:
         print("Error. Introduce un número!")
