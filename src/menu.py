@@ -1,7 +1,3 @@
-
-
-import sys  # this allows you to use the sys.exit command to quit/logout of the application
-import os  # This allows you to call files
 import xml.etree.ElementTree as ALL
 
 from src import LecturaXML
