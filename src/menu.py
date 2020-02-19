@@ -20,7 +20,10 @@ def borrarPantalla():
 
 
 def case_1():
-    LecturaXML.treeLoad(rootEnemy)
+    try:
+        LecturaXML.treeLoad(rootEnemy)
+    except:
+        print("Can't load tree")
     borrarPantalla()
 
 
