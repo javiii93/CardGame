@@ -147,7 +147,7 @@ while opt != 14:
                 menu_crear_mazo_enemigo()
                 print("*********************************")
                 opt = int(input("Introduzca su opción: "))
-                # Opt crear mazos enemigos
+                # Opt create enemy deck
                 if opt == 7:
                     case_7()
                 elif opt == 8:
