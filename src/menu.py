@@ -1,5 +1,4 @@
 import xml.etree.ElementTree as ALL
-
 from src import LecturaXML
 
 tree = ALL.parse('xml_dtd/myBaraja.xml')
@@ -8,7 +7,7 @@ tree2 = ALL.parse('xml_dtd/Enemigo.xml')
 rootEnemy = tree2.getroot()
 
 
-# Funciones
+# Functions
 
 def case_1():
     try:
