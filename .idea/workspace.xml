@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45c84299-414a-438c-b0f2-a7b1d91ab6a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CardGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CardGame.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +129,21 @@
       <option name="project" value="LOCAL" />
       <updated>1582152907439</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="complete">
+      <created>1582190895006</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1582190895006</updated>
+    </task>
+    <task id="LOCAL-00007" summary="complete">
+      <created>1582191034238</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1582191034238</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,7 +163,8 @@
     <MESSAGE value="Javi he cambiado el case 1 y el case 2 por que creo que estaba cargando el mismo mazo enemigo mira por favor si lo deje bien." />
     <MESSAGE value="he borrado los import no usados igualmente estan en el menucopy" />
     <MESSAGE value="he puesto los comentarios en ingles para evitar esos typo errors pero bueno he organizado algunos errores  que mostraba de espacios" />
-    <option name="LAST_COMMIT_MESSAGE" value="he puesto los comentarios en ingles para evitar esos typo errors pero bueno he organizado algunos errores  que mostraba de espacios" />
+    <MESSAGE value="complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete" />
   </component>
   <component name="WindowStateProjectService">
     <state x="496" y="27" key="#LecturaXML" timestamp="1582015435789">
@@ -163,10 +175,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1582015989204" />
-    <state x="443" y="0" width="938" height="810" key="CommitChangelistDialog2" timestamp="1582190893230">
+    <state x="443" y="0" width="938" height="810" key="CommitChangelistDialog2" timestamp="1582191032277">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="443" y="0" width="938" height="810" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582190893230" />
+    <state x="443" y="0" width="938" height="810" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582191032277" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1581686489795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -219,9 +231,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1582150168094" />
-    <state x="554" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582186372196">
+    <state x="554" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582191180664">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="554" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1582186372196" />
+    <state x="554" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1582191180664" />
   </component>
 </project>
