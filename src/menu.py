@@ -1,14 +1,20 @@
+# --- MENU ENTREGA FASE 1 ---
+
+import sys  # this allows you to use the sys.exit command to quit/logout of the application
+import os  # This allows you to call files
 import xml.etree.ElementTree as ALL
 from src import LecturaXML
 
+#Lectura de los XML
 tree = ALL.parse('xml_dtd/myBaraja.xml')
 rootPlayer = tree.getroot()
 tree2 = ALL.parse('xml_dtd/Enemigo.xml')
 rootEnemy = tree2.getroot()
 
 
-# Functions
+# Funciones
 
+#Funcion para leer XML del jugador local
 def case_1():
     try:
         print("\nCARGAR CARTAS PLAYER")
@@ -26,7 +32,7 @@ def case_2():
     except NameError:
         print("Can't load tree")
 
-
+#Funcion crear mazo aleatorio del jugador local
 def case_3():
     print("Mazo creado.")
 
@@ -115,7 +121,7 @@ def menu_combate():
 
 opt = 0
 
-while opt != 14:
+while opt != 14: #repetimos el menu principal hasta que el usuario introdusca una opcion valida
 
     menu_principal()
     try:
