@@ -3,14 +3,16 @@
 import xml.etree.ElementTree as ALL
 from src import LecturaXML
 
-#Lectura de los XML
+#  Lectura de los XML
+
 tree = ALL.parse('xml_dtd/myBaraja.xml')
 rootPlayer = tree.getroot()
 tree2 = ALL.parse('xml_dtd/Enemigo.xml')
 rootEnemy = tree2.getroot()
 
 
-#Funcion para leer XML del jugador local
+# Funcion para leer XML del jugador local
+
 def case_1():
     try:
         print("\nCARGAR CARTAS PLAYER")
@@ -28,7 +30,9 @@ def case_2():
     except NameError:
         print("Can't load tree")
 
-#Funcion crear mazo aleatorio del jugador local
+# Funcion crear mazo aleatorio del jugador local
+
+
 def case_3():
     print("Mazo creado.")
 
@@ -116,8 +120,8 @@ def menu_combate():
 
 
 opt = 0
-
-while opt != 14: #repetimos el menu principal hasta que el usuario introdusca una opcion valida
+# repetimos el menu principal hasta que el usuario introdusca una opcion valida
+while opt != 14:
 
     menu_principal()
     try:
