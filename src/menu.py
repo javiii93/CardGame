@@ -1,7 +1,5 @@
 # --- MENU ENTREGA FASE 1 ---
 
-import sys  # this allows you to use the sys.exit command to quit/logout of the application
-import os  # This allows you to call files
 import xml.etree.ElementTree as ALL
 from src import LecturaXML
 
@@ -11,8 +9,6 @@ rootPlayer = tree.getroot()
 tree2 = ALL.parse('xml_dtd/Enemigo.xml')
 rootEnemy = tree2.getroot()
 
-
-# Funciones
 
 #Funcion para leer XML del jugador local
 def case_1():
