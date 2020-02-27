@@ -1,27 +1,49 @@
 import xml.etree.ElementTree as ALL
-
+import array
 tree = ALL.parse('xml_dtd/myBaraja.xml')
 rootXml = tree.getroot()
+
+
+class Card:
+    def __init__(self, _summonPoints, _type, _name, _description, _attack, _defense):
+        self.summonPoints = _summonPoints
+        self.type = _type
+        self.name = _name
+        self.description = _description
+        self.attack = _attack
+        self.defense = _defense
+
+    def __str__(self):
+        return "summonPoints: " + str(self.summonPoints) + ", Type: " + str(self.type) + ", Name: " + str(
+            self.name) + ", Description: " + str(self.description) + ", Attack: " + str(
+            self.attack) + ", Defense: " + str(self.defense)
+
 
 #Bucle para seleccionar las diez cartas con mayor ataque usando Xpath
 
 numCartasAttack = 0
 maxAttack = 5
-
+arrCards = []
 
 while numCartasAttack < 10:
     for card in rootXml.findall("./deck/card/[attack='"+str(maxAttack)+"']"):
-        #print(ALL.tostring(card, encoding='utf8').decode('utf8')) para visualizar lo que fue selecionado
+        #print(ALL.tostring(card, encoding='utf8').decode('utf8'))
+        #para visualizar lo que fue selecionado
         # a remplzar por signacion a objeto
         numCartasAttack = numCartasAttack + 1
+        carta=Card(card.attrib['summonPoints'],card.attrib['type'],card.find('name').text,card.find('description').text,card.find('attack').text,card.find('defense').text)
+        arrCards.append(carta)
         if numCartasAttack == 10:
             break
     maxAttack = maxAttack - 1
 
 print("*********")
-
+#print(len(arrCards))
 numCartasDefense = 0
 maxDefense = 5
+#Recorremos la array de cartas y las mostramos
+for h in range(len(arrCards)):
+    print (arrCards[h] )
 
 #Bucle para seleccionar las diez cartas con mayor defensa usando Xpath
 
