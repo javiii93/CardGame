@@ -7,9 +7,9 @@ class Card:
         self.attack = _attack
         self.defense = _defense
      def __str__(self):
-        return "summonPoints: ",self.summonPoints,", Type: ",self.type,", Name: ",self.name,", Description: ",self.description,", Attack: ",self.attack,", Defense: ",self.defense
+        return "summonPoints: "+str(self.summonPoints)+", Type: "+str(self.type)+", Name: "+str(self.name)+", Description: "+str(self.description)+", Attack: "+str(self.attack)+", Defense: "+str(self.defense)
 
 
 x=Card(1,'fdsa','fsdaf','fdsfasd',4,4)
-x.__str__()
+print(x)
 
