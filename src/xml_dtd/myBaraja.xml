@@ -24,7 +24,7 @@
 		</card>
 		<card summonPoints="2" type="lancer">
 			<name>Uruk-kai</name>
-			<description>Su larga lanza lo deja vunerable a la infanteria.</description>
+			<description>Su larga lanza lo deja vulnerable a la infanteria.</description>
 			<attack>2</attack>
 			<defense>0</defense>
 		</card>
