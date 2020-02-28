@@ -1,29 +1,29 @@
 import xml.etree.ElementTree as ALL
 from random import randint
-from random import sample, randrange
-
 tree = ALL.parse('xml_dtd/myBaraja.xml')
 rootXml = tree.getroot()
+numCartas = 1;
 
-numCartas = 0;
-
-while numCartas < 10:
-    numero = randrange(5)
-    print (numero)
-    for card in rootXml.findall("./deck/card[@summonPoints='"+str(numero)+"']"):
-        print(ALL.tostring(card, encoding='utf8').decode('utf8'))
-        numCartas = numCartas + 1
-        break
-        if numCartas == 10:
-            break
 
 def randomNumArray():
     arr=[]
     for _ in range(10):
         value = randint(1, 20)
-        print(value)
+        #Hay que comprobar si el nuevo numero aleatorio esta en el array.
+        while (value in arr):
+            value = randint(1, 20)
         arr.append(value)
     return arr
 
-print("*********")
-randomNumArray()
+
+array = randomNumArray()
+#leer array de 10 numeros aleatorios y printear cartas aleatorias.
+for i in range(len(array)):
+   num = array[i]
+   contador = 0
+   while contador <= num:
+       for card in rootXml.findall("./deck/card"):
+           contador = contador + 1
+           if contador == num:
+               print(ALL.tostring(card, encoding='utf8').decode('utf8'))
+               break
