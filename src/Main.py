@@ -2,7 +2,9 @@
 
 import xml.etree.ElementTree as ALL
 from src import LecturaXML
+from src.CrearMazosOfDefEqu import arrOfCards, arrDefCards, arrEqCards
 from src.MazoAleatorio import arrRandomCards
+
 
 #  Lectura de los XML
 
@@ -43,15 +45,27 @@ def case_3():
         print(arrCardPlayer[h])
 
 def case_4():
-    print("Mazo creado.")
+    print("\nCREAR MAZO OFENSIVO PLAYER/n")
+    print("*********************************\n")
+    arrCardOfPlayer = arrOfCards(rootPlayer)
+    for h in range(len(arrCardOfPlayer)):
+        print(arrCardOfPlayer[h])
 
 
 def case_5():
-    print("Mazo creado.")
+    print("\nCREAR MAZO DEFENSIVO PLAYER/n")
+    print("*********************************\n")
+    arrCardDefPlayer = arrDefCards(rootPlayer)
+    for h in range(len(arrCardDefPlayer)):
+        print(arrCardDefPlayer[h])
 
 
 def case_6():
-    print("Mazo creado.")
+    print("\nCREAR MAZO EQUILIBRADO PLAYER/n")
+    print("*********************************\n")
+    arrCardEqPlayer = arrEqCards(rootPlayer)
+    for h in range(len(arrCardEqPlayer)):
+        print(arrCardEqPlayer[h])
 
 
 def case_7():
@@ -63,15 +77,27 @@ def case_7():
 
 
 def case_8():
-    print("Mazo creado.")
+    print("\nCREAR MAZO OFENSIVO ENEMY/n")
+    print("*********************************\n")
+    arrCardOfEnemy = arrOfCards(rootEnemy)
+    for h in range(len(arrCardOfEnemy)):
+        print(arrCardOfEnemy[h])
 
 
 def case_9():
-    print("Mazo creado.")
+    print("\nCREAR MAZO DEFENSIVO ENEMY/n")
+    print("*********************************\n")
+    arrCardDefEnemy = arrDefCards(rootEnemy)
+    for h in range(len(arrCardDefEnemy)):
+        print(arrCardDefEnemy[h])
 
 
 def case_10():
-    print("Mazo creado.")
+    print("\nCREAR MAZO EQUILIBRADO ENEMY/n")
+    print("*********************************\n")
+    arrCardEqEnemy = arrEqCards(rootEnemy)
+    for h in range(len(arrCardEqEnemy)):
+        print(arrCardEqEnemy[h])
 
 
 def case_11():
