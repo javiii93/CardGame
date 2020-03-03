@@ -1,12 +1,6 @@
-import xml.etree.ElementTree as ALL
 from random import randint
 
 from src.Card import Card
-
-tree = ALL.parse('xml_dtd/myBaraja.xml')
-rootXml = tree.getroot()
-numCartas = 1;
-
 
 def randomNumArray():
     arr = []
@@ -27,7 +21,7 @@ def arrRandomCards(xmlElement):
         num = arrRandomNumber[i]
         contador = 0
         while contador <= num:
-            for card in rootXml.findall("./deck/card"):
+            for card in xmlElement.findall("./deck/card"):
                 contador = contador + 1
                 if contador == num:
                     carta = Card(card.attrib['summonPoints'], card.attrib['type'], card.find('name').text,
