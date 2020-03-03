@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ALL
-from src import Card
 from random import randint
+
+from src.Card import Card
 
 tree = ALL.parse('xml_dtd/myBaraja.xml')
 rootXml = tree.getroot()
@@ -32,6 +33,6 @@ def arrRandomCards(xmlElement):
                 carta = Card(card.attrib['summonPoints'], card.attrib['type'], card.find('name').text,
                              card.find('description').text, card.find('attack').text, card.find('defense').text)
                 arrCards.append(carta)
-                # print(ALL.tostring(card, encoding='utf8').decode('utf8'))
+                print('carta añadida')
                 break
     return arrCards
