@@ -7,8 +7,6 @@ from src.MazoAleatorio import arrRandomCards
 
 
 #  Lectura de los XML
-
-
 tree = ALL.parse('xml_dtd/myBaraja.xml')
 rootPlayer = tree.getroot()
 tree2 = ALL.parse('xml_dtd/Enemigo.xml')
@@ -16,7 +14,6 @@ rootEnemy = tree2.getroot()
 
 
 # Funcion para leer XML del jugador local
-
 def case_1():
     try:
         print("\nCARGAR CARTAS PLAYER")
@@ -25,7 +22,7 @@ def case_1():
     except NameError:
         print("Can't load tree")
 
-
+# Funcion para leer XML del jugador enemigo
 def case_2():
     try:
         print("\nCARGAR CARTAS ENEMIGO/n")
@@ -35,8 +32,6 @@ def case_2():
         print("Can't load tree")
 
 # Funcion crear mazo aleatorio del jugador local
-
-
 def case_3():
     print("\nCREAR MAZO ALEATORIO PLAYER/n")
     print("*********************************\n")
@@ -44,6 +39,7 @@ def case_3():
     for h in range(len(arrCardPlayer)):
         print(arrCardPlayer[h])
 
+# Funcion crear mazo ofensivo del jugador local
 def case_4():
     print("\nCREAR MAZO OFENSIVO PLAYER/n")
     print("*********************************\n")
@@ -51,7 +47,7 @@ def case_4():
     for h in range(len(arrCardOfPlayer)):
         print(arrCardOfPlayer[h])
 
-
+# Funcion crear mazo defensivo del jugador local
 def case_5():
     print("\nCREAR MAZO DEFENSIVO PLAYER/n")
     print("*********************************\n")
@@ -59,7 +55,7 @@ def case_5():
     for h in range(len(arrCardDefPlayer)):
         print(arrCardDefPlayer[h])
 
-
+# Funcion crear mazo equilibrado del jugador local
 def case_6():
     print("\nCREAR MAZO EQUILIBRADO PLAYER/n")
     print("*********************************\n")
@@ -67,7 +63,7 @@ def case_6():
     for h in range(len(arrCardEqPlayer)):
         print(arrCardEqPlayer[h])
 
-
+# Funcion crear mazo aleatorio del jugador enemigo
 def case_7():
     print("\nCREAR MAZO ALEATORIO ENEMY/n")
     print("*********************************\n")
@@ -75,7 +71,7 @@ def case_7():
     for h in range(len(arrCardEnemy)):
         print(arrCardEnemy[h])
 
-
+# Funcion crear mazo ofensivo del jugador enemigo
 def case_8():
     print("\nCREAR MAZO OFENSIVO ENEMY/n")
     print("*********************************\n")
@@ -83,7 +79,7 @@ def case_8():
     for h in range(len(arrCardOfEnemy)):
         print(arrCardOfEnemy[h])
 
-
+# Funcion crear mazo defensivo del jugador enemigo
 def case_9():
     print("\nCREAR MAZO DEFENSIVO ENEMY/n")
     print("*********************************\n")
@@ -91,7 +87,7 @@ def case_9():
     for h in range(len(arrCardDefEnemy)):
         print(arrCardDefEnemy[h])
 
-
+# Funcion crear mazo equilibrado del jugador enemigo
 def case_10():
     print("\nCREAR MAZO EQUILIBRADO ENEMY/n")
     print("*********************************\n")
@@ -155,6 +151,7 @@ def menu_combate():
 
 
 opt = 0
+
 # repetimos el menu principal hasta que el usuario introdusca una opcion valida
 while opt != 14:
     menu_principal()
