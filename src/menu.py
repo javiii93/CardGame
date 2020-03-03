@@ -2,8 +2,10 @@
 
 import xml.etree.ElementTree as ALL
 from src import LecturaXML
+from src.MazoAleatorio import arrRandomCards
 
 #  Lectura de los XML
+
 
 tree = ALL.parse('xml_dtd/myBaraja.xml')
 rootPlayer = tree.getroot()
@@ -34,8 +36,11 @@ def case_2():
 
 
 def case_3():
-    print("Mazo creado.")
-
+    print("\nCREAR MAZO ALEATORIO PLAYER/n")
+    print("*********************************\n")
+    arrCardPlayer=arrRandomCards(rootPlayer)
+    for h in range(len(arrCardPlayer)):
+        print(arrCardPlayer[h])
 
 def case_4():
     print("Mazo creado.")
@@ -50,7 +55,11 @@ def case_6():
 
 
 def case_7():
-    print("Mazo creado.")
+    print("\nCREAR MAZO ALEATORIO ENEMY/n")
+    print("*********************************\n")
+    arrCardEnemy = arrRandomCards(rootEnemy)
+    for h in range(len(arrCardEnemy)):
+        print(arrCardEnemy[h])
 
 
 def case_8():
@@ -122,7 +131,6 @@ def menu_combate():
 opt = 0
 # repetimos el menu principal hasta que el usuario introdusca una opcion valida
 while opt != 14:
-
     menu_principal()
     try:
         print("*********************************")
