@@ -26,13 +26,12 @@ def arrRandomCards(xmlElement):
     for i in range(len(arrRandomNumber)):
         num = arrRandomNumber[i]
         contador = 0
-    while contador <= num:
-        for card in rootXml.findall("./deck/card"):
-            contador = contador + 1
-            if contador == num:
-                carta = Card(card.attrib['summonPoints'], card.attrib['type'], card.find('name').text,
-                             card.find('description').text, card.find('attack').text, card.find('defense').text)
-                arrCards.append(carta)
-                print('carta añadida')
-                break
+        while contador <= num:
+            for card in rootXml.findall("./deck/card"):
+                contador = contador + 1
+                if contador == num:
+                    carta = Card(card.attrib['summonPoints'], card.attrib['type'], card.find('name').text,
+                                 card.find('description').text, card.find('attack').text, card.find('defense').text)
+                    arrCards.append(carta)
+                    break
     return arrCards
