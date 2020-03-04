@@ -4,6 +4,7 @@ import xml.etree.ElementTree as ALL
 from src import LecturaXML
 from src.CrearMazosOfDefEqu import arrOfCards, arrDefCards, arrEqCards
 from src.MazoAleatorio import arrRandomCards
+from src.Player import Player
 
 
 #  Lectura de los XML
@@ -13,7 +14,8 @@ tree2 = ALL.parse('xml_dtd/Enemigo.xml')
 rootEnemy = tree2.getroot()
 
 # declaracion del player y el enemy para hacer pruebas
-
+playerPrueba=Player('Luisito Comunica')
+enemyPrueba=Player('Sergio Pujol')
 
 # Funcion para leer XML del jugador local
 def case_1():
@@ -40,6 +42,7 @@ def case_3():
     arrCardPlayer=arrRandomCards(rootPlayer)
     for h in range(len(arrCardPlayer)):
         print(arrCardPlayer[h])
+
 
 # Funcion crear mazo ofensivo del jugador local
 def case_4():
