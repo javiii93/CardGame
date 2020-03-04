@@ -9,7 +9,6 @@ class Card:
      def __str__(self):
         return "summonPoints: "+str(self.summonPoints)+", Type: "+str(self.type)+", Name: "+str(self.name)+", Description: "+str(self.description)+", Attack: "+str(self.attack)+", Defense: "+str(self.defense)
 
-
 #x=Card(1,'fdsa','fsdaf','fdsfasd',4,4)
 #print(x)
 
