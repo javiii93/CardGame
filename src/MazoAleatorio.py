@@ -29,3 +29,5 @@ def arrRandomCards(xmlElement):
                     arrCards.append(carta)
                     break
     return arrCards
+
+
