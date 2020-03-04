@@ -43,25 +43,25 @@ def case_3():
 def case_4():
     print("\nCREAR MAZO OFENSIVO PLAYER/n")
     print("*********************************\n")
-    arrCardOfPlayer = arrOfCards(rootPlayer)
-    for h in range(len(arrCardOfPlayer)):
-        print(arrCardOfPlayer[h])
+    arrCardPlayer = arrOfCards(rootPlayer)
+    for h in range(len(arrCardPlayer)):
+        print(arrCardPlayer[h])
 
 # Funcion crear mazo defensivo del jugador local
 def case_5():
     print("\nCREAR MAZO DEFENSIVO PLAYER/n")
     print("*********************************\n")
-    arrCardDefPlayer = arrDefCards(rootPlayer)
-    for h in range(len(arrCardDefPlayer)):
-        print(arrCardDefPlayer[h])
+    arrCardPlayer = arrDefCards(rootPlayer)
+    for h in range(len(arrCardPlayer)):
+        print(arrCardPlayer[h])
 
 # Funcion crear mazo equilibrado del jugador local
 def case_6():
     print("\nCREAR MAZO EQUILIBRADO PLAYER/n")
     print("*********************************\n")
-    arrCardEqPlayer = arrEqCards(rootPlayer)
-    for h in range(len(arrCardEqPlayer)):
-        print(arrCardEqPlayer[h])
+    arrCardPlayer = arrEqCards(rootPlayer)
+    for h in range(len(arrCardPlayer)):
+        print(arrCardPlayer[h])
 
 # Funcion crear mazo aleatorio del jugador enemigo
 def case_7():
@@ -75,25 +75,25 @@ def case_7():
 def case_8():
     print("\nCREAR MAZO OFENSIVO ENEMY/n")
     print("*********************************\n")
-    arrCardOfEnemy = arrOfCards(rootEnemy)
-    for h in range(len(arrCardOfEnemy)):
-        print(arrCardOfEnemy[h])
+    arrCardEnemy = arrOfCards(rootEnemy)
+    for h in range(len(arrCardEnemy)):
+        print(arrCardEnemy[h])
 
 # Funcion crear mazo defensivo del jugador enemigo
 def case_9():
     print("\nCREAR MAZO DEFENSIVO ENEMY/n")
     print("*********************************\n")
-    arrCardDefEnemy = arrDefCards(rootEnemy)
-    for h in range(len(arrCardDefEnemy)):
-        print(arrCardDefEnemy[h])
+    arrCardEnemy = arrDefCards(rootEnemy)
+    for h in range(len(arrCardEnemy)):
+        print(arrCardEnemy[h])
 
 # Funcion crear mazo equilibrado del jugador enemigo
 def case_10():
     print("\nCREAR MAZO EQUILIBRADO ENEMY/n")
     print("*********************************\n")
-    arrCardEqEnemy = arrEqCards(rootEnemy)
-    for h in range(len(arrCardEqEnemy)):
-        print(arrCardEqEnemy[h])
+    arrCardEnemy = arrEqCards(rootEnemy)
+    for h in range(len(arrCardEnemy)):
+        print(arrCardEnemy[h])
 
 
 def case_11():
