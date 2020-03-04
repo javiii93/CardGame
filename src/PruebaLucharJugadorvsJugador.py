@@ -1,5 +1,10 @@
 from random import randint
 
+from src.Player import Player
+
+jugador1 = Player()
+
+
 def invocacion(arg): #parametros: jugador local o enemigo
     #reiniciar puntos de invocacion del jugador a 5
 
