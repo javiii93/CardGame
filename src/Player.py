@@ -1,5 +1,5 @@
 class Player:
-    def __init__(self, _name, _arrCardsP ):
+    def __init__(self, _name, _arrCardsP=None):
         self.summonPoints = 5
         self.life = 10
         self.arrCards = _arrCardsP
