@@ -7,10 +7,14 @@ from src.MazoAleatorio import arrRandomCards
 
 
 #  Lectura de los XML
+from src.PruebaLucharJugadorvsBot import CrearJugadores
+
 tree = ALL.parse('xml_dtd/myBaraja.xml')
 rootPlayer = tree.getroot()
 tree2 = ALL.parse('xml_dtd/Enemigo.xml')
 rootEnemy = tree2.getroot()
+
+# declaracion del player y el enemy para hacer pruebas
 
 
 # Funcion para leer XML del jugador local

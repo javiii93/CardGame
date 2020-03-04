@@ -4,7 +4,7 @@ from src.Card import Card
 
 def randomNumArray():
     arr = []
-    for _ in range(10):
+    for i in range(10):
         value = randint(1, 20)
         # Hay que comprobar si el nuevo numero aleatorio esta en el array.
         while (value in arr):

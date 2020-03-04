@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45c84299-414a-438c-b0f2-a7b1d91ab6a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Player.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PruebaLucharJugadorvsJugador.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CardGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CardGame.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Card.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Card.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MazoAleatorio.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/MazoAleatorio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PruebaLucharJugadorvsBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/PruebaLucharJugadorvsBot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,31 +38,9 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/PruebaLucharJugadorvsBot.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.PruebaLucharJugadorvsBot">
-    <configuration name="Card" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CardGame" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Card.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.Main">
     <configuration name="Main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CardGame" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -92,7 +74,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Main.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\sergi\PycharmProjects\CardGame\src\Main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -101,28 +83,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CardGame" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\sergi\AppData\Local\Programs\Python\Python38-32\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/PruebaLucharJugadorvsBot.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="PruebaCrearMazosOfDefAlec" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="MazoAleatorio" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CardGame" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -134,7 +95,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/PruebaCrearMazosOfDefAlec.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/MazoAleatorio.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -150,9 +111,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\sergi\AppData\Local\Programs\Python\Python38-32\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/PruebaLucharJugadorvsBot.py" />
@@ -164,19 +125,41 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="PruebaLucharJugadorvsJugador" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CardGame" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/PruebaLucharJugadorvsJugador.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.Card" />
+      <item itemvalue="Python.Main (1)" />
       <item itemvalue="Python.Main" />
+      <item itemvalue="Python.MazoAleatorio" />
       <item itemvalue="Python.PruebaLucharJugadorvsBot" />
-      <item itemvalue="Python.PruebaCrearMazosOfDefAlec" />
+      <item itemvalue="Python.PruebaLucharJugadorvsJugador" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Main" />
         <item itemvalue="Python.PruebaLucharJugadorvsBot" />
-        <item itemvalue="Python.Main" />
-        <item itemvalue="Python.Main" />
-        <item itemvalue="Python.PruebaCrearMazosOfDefAlec" />
-        <item itemvalue="Python.Card" />
+        <item itemvalue="Python.PruebaLucharJugadorvsJugador" />
+        <item itemvalue="Python.Main (1)" />
+        <item itemvalue="Python.MazoAleatorio" />
       </list>
     </recent_temporary>
   </component>
@@ -268,34 +251,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="496" y="27" key="#LecturaXML/0.0.1536.824@0.0.1536.824" timestamp="1582015435789" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583317086308">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583317337103">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1583317086308" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1583317337103" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1583316340514">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1583316340514" />
     <state x="443" y="0" width="938" height="810" key="CommitChangelistDialog2" timestamp="1582191032277">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="443" y="0" width="938" height="810" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582191032277" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1583316700538">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1581686489795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583316700538" />
-    <state width="1515" height="225" key="GridCell.Tab.0.bottom" timestamp="1583317193048">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1581686489795" />
+    <state width="1515" height="225" key="GridCell.Tab.0.bottom" timestamp="1583319930825">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="225" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583317193048" />
-    <state width="1515" height="225" key="GridCell.Tab.0.center" timestamp="1583317193048">
+    <state width="1515" height="225" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583319930825" />
+    <state width="1515" height="225" key="GridCell.Tab.0.center" timestamp="1583319930824">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="225" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583317193048" />
-    <state width="1515" height="225" key="GridCell.Tab.0.left" timestamp="1583317193048">
+    <state width="1515" height="225" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583319930824" />
+    <state width="1515" height="225" key="GridCell.Tab.0.left" timestamp="1583319930824">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="225" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583317193048" />
-    <state width="1515" height="225" key="GridCell.Tab.0.right" timestamp="1583317193048">
+    <state width="1515" height="225" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583319930824" />
+    <state width="1515" height="225" key="GridCell.Tab.0.right" timestamp="1583319930825">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="225" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583317193048" />
+    <state width="1515" height="225" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583319930825" />
     <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1581682632360">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -324,10 +311,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583313967390" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1583316610072">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1582903433918">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583316610072" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1582903433918" />
     <state x="554" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582191180664">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
