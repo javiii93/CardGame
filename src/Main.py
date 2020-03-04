@@ -12,6 +12,8 @@ rootPlayer = tree.getroot()
 tree2 = ALL.parse('xml_dtd/Enemigo.xml')
 rootEnemy = tree2.getroot()
 
+# declaracion del player y el enemy para hacer pruebas
+
 
 # Funcion para leer XML del jugador local
 def case_1():
