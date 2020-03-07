@@ -82,17 +82,31 @@ def confrontacion(jugador1, jugador2): #parametros : jugador local y jugador ene
     if valorDestino == 1:
         while jugador1.life > 0 and jugador2.life > 0 and len(arrCardTurnPlayer1) > 0 and len(arrCardTurnPlayer2) > 0:
             danoPorCiclo = 0
+            dano = 0
+            print("+++++ CICLO +++++")
+            print("vidas  jugador1", jugador1.life, " jugador2 ", jugador2.life)
             for indexCardTurn in range(0,len(arrCardTurnPlayer1)):
+                print("----- ATAQUE ------")
+                print(jugador1.name," ", arrCardTurnPlayer1[indexCardTurn])
+
                 if indexCardTurn < len(arrCardTurnPlayer2):
+                    print(jugador2.name, " ", arrCardTurnPlayer2[indexCardTurn])
                     danoPorCiclo = danoPorCiclo + peleaCartas(indexCardTurn, arrCardTurnPlayer1, arrCardTurnPlayer2, jugador2)
                 else:
                     jugador2.life = int(jugador2.life) - int(arrCardTurnPlayer1[indexCardTurn].attack)
+                print("vidas  jugador1", jugador1.life, " jugador2 ", jugador2.life)
             if jugador2.life > 0:
                 for indexCardTurn in range(0,len(arrCardTurnPlayer2)):
+                    print("----- ATAQUE ------")
+                    print(jugador2.name, " ", arrCardTurnPlayer2[indexCardTurn])
+
                     if indexCardTurn < len(arrCardTurnPlayer1):
+                        print(jugador1.name, " ", arrCardTurnPlayer1[indexCardTurn])
                         danoPorCiclo = danoPorCiclo + peleaCartas(indexCardTurn, arrCardTurnPlayer2, arrCardTurnPlayer1, jugador1)
                     else:
                         jugador1.life = int(jugador1.life) - int(arrCardTurnPlayer2[indexCardTurn].attack)
+                    print("vidas  jugador1", jugador1.life, " jugador2 ", jugador2.life)
+            print(danoPorCiclo)
             print("Danos recibidos por el jugador ", jugador1.name, " ", 10 - jugador1.life)
             print("Danos recibidos por el jugador ", jugador2.name, " ", 10 - jugador2.life)
             if jugador1.life <= 0:
