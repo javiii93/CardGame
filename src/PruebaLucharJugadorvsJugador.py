@@ -9,7 +9,7 @@ from src.Player import Player
 tree = ALL.parse('xml_dtd/myBaraja.xml')
 rootPlayer = tree.getroot()
 
-#Mazos aleatorios para probar el alogoritmo
+#Creacino de los mazos aleatorios para probar el alogoritmo
 arrCard1 = arrRandomCards(rootPlayer)
 arrCard2 = arrRandomCards(rootPlayer)
 
@@ -28,7 +28,7 @@ for h in range(len(jugador2.arrCards)):
 print()
 print()
 
-print("***** TURNO 1 *******")
+#DEFINICION DE FUNCIONES UTILIZADAS POR EL ALGORITMO
 
 #Funcion para crear un array des diez posiciones que contagan aleatoriamente valores entre 0 y 9 (cada mazo lleva 10 cartas)
 def randomNumArray10():
@@ -57,22 +57,6 @@ def invocacion(jugador):
             arrCardTurnPlayer.append((jugador.arrCards[randomArray[arrayIndex]]))
         arrayIndex = arrayIndex + 1
     return arrCardTurnPlayer
-
-
-#A cada jugador se le asocia unas cartas de turno a partir de su mazo
-arrCardTurnPlayer1 = invocacion(jugador1)
-arrCardTurnPlayer2 = invocacion(jugador2)
-
-#Mostramos las cartas de mano de turno de cada jugador
-print("cartas turno jugador 1 :")
-for h in range(len(arrCardTurnPlayer1)):
-    print(arrCardTurnPlayer1[h])
-print("cartas turno jugador 2 :")
-for h in range(len(arrCardTurnPlayer2)):
-    print(arrCardTurnPlayer2[h])
-
-print()
-print()
 
 #Funcion para tira aleatoriamente 1 o 2 para luego escoger que jugador empieza primero (jugador1 es el jugador
 #metido en parametro primero en la funcion confrontacion. El jugador2 es el que es metido en segundo.
@@ -110,8 +94,8 @@ def confrontacion(jugador1, jugador2): #parametros : jugador local y jugador ene
                 print("El jugador ", jugador2.name, " ha sido eliminado.")
             if danoPorCiclo == 0: #si no han habido peleas de cartas con danos cerramos el turno
                 break
-        print("Danos recibidos por el jugador ", jugador1.name, " ", 10 - jugador1.life)
-        print("Danos recibidos por el jugador ", jugador2.name, " ", 10 - jugador2.life)
+        print("Danos totales recibidos por el jugador ", jugador1.name, " ", 10 - jugador1.life)
+        print("Danos totales recibidos por el jugador ", jugador2.name, " ", 10 - jugador2.life)
 
     if valorDestino == 2:#el jugador2 atacara primero
         while jugador1.life > 0 and jugador2.life > 0 and len(arrCardTurnPlayer1) > 0 and len(arrCardTurnPlayer2) > 0:
@@ -137,8 +121,8 @@ def confrontacion(jugador1, jugador2): #parametros : jugador local y jugador ene
                 print("El jugador ", jugador2.name, " ha sido eliminado.")
             if danoPorCiclo == 0:#si no han habido peleas de cartas con danos cerramos el turno
                 break
-        print("Danos recibidos por el jugador ", jugador1.name, " ", 10 - jugador1.life)
-        print("Danos recibidos por el jugador ", jugador2.name, " ", 10 - jugador2.life)
+        print("Danos totales recibidos por el jugador ", jugador1.name, " ", 10 - jugador1.life)
+        print("Danos totales recibidos por el jugador ", jugador2.name, " ", 10 - jugador2.life)
 
 #Funcion para hacer la pelea entre las cartas aplicando un modificador de ataque segun el tipo de carta ofensiva y defensiva
 def peleaCartas(indexCardTurn, arrCardOfPlayer, arrCardDefPlayer, defPlayer):
@@ -176,5 +160,29 @@ def comparaAtaqueDefensa(indexCardTurn, ofCard, defCard, defPlayer, arrCardDefPl
     del arrCardDefPlayer[indexCardTurn]
     return dano
 
-confrontacion(jugador1, jugador2)
 
+
+# EJECUCION DE LAS FUNCIONES
+turno = 1
+while jugador1.life > 0 and jugador2.life > 0:
+    print("******** TURNO ", turno, "********" )
+    #A cada jugador se le asocia unas cartas de turno a partir de su mazo
+    arrCardTurnPlayer1 = invocacion(jugador1)
+    arrCardTurnPlayer2 = invocacion(jugador2)
+
+    #Mostramos las cartas de mano de turno de cada jugador
+    print("cartas turno jugador 1 :")
+    for h in range(len(arrCardTurnPlayer1)):
+        print(arrCardTurnPlayer1[h])
+    print("cartas turno jugador 2 :")
+    for h in range(len(arrCardTurnPlayer2)):
+        print(arrCardTurnPlayer2[h])
+
+    print()
+    print()
+
+    confrontacion(jugador1, jugador2)
+
+    turno = turno + 1
+
+    print()
