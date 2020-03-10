@@ -8,7 +8,7 @@ from src.Player import Player
 
 
 #  Lectura de los XML
-from src.PruebaLucharJugadorvsJugador import ejecutarPartida
+from src.PruebaLucharJugadorvsJugador import ejecutarPartida, ligaSantander
 
 tree = ALL.parse('xml_dtd/myBaraja.xml')
 rootPlayer = tree.getroot()
@@ -16,8 +16,11 @@ tree2 = ALL.parse('xml_dtd/Enemigo.xml')
 rootEnemy = tree2.getroot()
 
 # declaracion del player y el enemy para hacer pruebas
+arrPlayer=[]
 playerPrueba=Player('Luisito Comunica')
 enemyPrueba=Player('Sergio Pujol')
+arrPlayer.append(playerPrueba)
+arrPlayer.append(enemyPrueba)
 
 # Funcion para leer XML del jugador local
 def case_1():
@@ -114,6 +117,7 @@ def case_12():
 
 def case_13():
     print("Luchar jugador vs Bot (Lliga)")
+    ligaSantander(arrPlayer)
 
 
 def case_14():
@@ -198,7 +202,7 @@ while opt != 14:
 
         # Opt to fight
         elif opt == 11:
-            if not playerPrueba.arrCards and not enemyPrueba.arrCards:
+            if not playerPrueba.arrCards or not enemyPrueba.arrCards:
                 print("No se puede ejecutar esta opcion hasta que se hayan cargado mazos para cada jugador.")
             else:
                 case_11()
