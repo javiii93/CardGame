@@ -6,27 +6,27 @@ from src.Card import Card
 from src.MazoAleatorio import arrRandomCards
 from src.Player import Player
 
-tree = ALL.parse('xml_dtd/myBaraja.xml')
-rootPlayer = tree.getroot()
+#tree = ALL.parse('xml_dtd/myBaraja.xml')
+#rootPlayer = tree.getroot()
 
 #Creacino de los mazos aleatorios para probar el alogoritmo
-arrCard1 = arrRandomCards(rootPlayer)
-arrCard2 = arrRandomCards(rootPlayer)
+#arrCard1 = arrRandomCards(rootPlayer)
+#arrCard2 = arrRandomCards(rootPlayer)
 
 #Dos jugadores de prueba con los mazos creados anteriormente asociados
-jugador1 = Player('Jugador1', arrCard1)
-jugador2 = Player('Jugador2', arrCard2)
+#jugador1 = Player('Jugador1', arrCard1)
+#jugador2 = Player('Jugador2', arrCard2)
 
 #Mostramos las cartas de los mazos de los dos jugadores
-print("Cartas mazo jugador 1 :")
-for h in range(len(jugador1.arrCards)):
-    print(jugador1.arrCards[h])
-print("Cartas mazo jugador 2 :")
-for h in range(len(jugador2.arrCards)):
-    print(jugador2.arrCards[h])
+#print("Cartas mazo jugador 1 :")
+#for h in range(len(jugador1.arrCards)):
+#    print(jugador1.arrCards[h])
+#print("Cartas mazo jugador 2 :")
+#for h in range(len(jugador2.arrCards)):
+#    print(jugador2.arrCards[h])
 
-print()
-print()
+#print()
+#print()
 
 #DEFINICION DE FUNCIONES UTILIZADAS POR EL ALGORITMO
 
@@ -68,7 +68,7 @@ def destino():
 #El ciclo acaba cuando se dejan de cumplir las condiciones especificadas por los ucles while o cuando se dejen de hacer dano
 #entre las cartas (por ejemplo: solo hay cartas defensivas sin ataque en juego -> el juego se bloquea y se termina el turno
 #por lo cual se vuelve a empezar desde la fase invocacion (nuevo turno)
-def confrontacion(jugador1, jugador2): #parametros : jugador local y jugador enemigo
+def confrontacion(jugador1, jugador2, arrCardTurnPlayer1, arrCardTurnPlayer2): #parametros : jugador local y jugador enemigo
     valorDestino = destino()
     if valorDestino == 1:#el jugador1 atacara primero
         while jugador1.life > 0 and jugador2.life > 0 and len(arrCardTurnPlayer1) > 0 and len(arrCardTurnPlayer2) > 0:
@@ -163,26 +163,33 @@ def comparaAtaqueDefensa(indexCardTurn, ofCard, defCard, defPlayer, arrCardDefPl
 
 
 # EJECUCION DE LAS FUNCIONES
-turno = 1
-while jugador1.life > 0 and jugador2.life > 0:
-    print("******** TURNO ", turno, "********" )
-    #A cada jugador se le asocia unas cartas de turno a partir de su mazo
-    arrCardTurnPlayer1 = invocacion(jugador1)
-    arrCardTurnPlayer2 = invocacion(jugador2)
+def ejecutarPartida(jugador1, jugador2):
+    turno = 1
+    while jugador1.life > 0 and jugador2.life > 0:
+        print("******** TURNO ", turno, "********" )
+        #A cada jugador se le asocia unas cartas de turno a partir de su mazo
+        arrCardTurnPlayer1 = invocacion(jugador1)
+        arrCardTurnPlayer2 = invocacion(jugador2)
 
-    #Mostramos las cartas de mano de turno de cada jugador
-    print("cartas turno jugador 1 :")
-    for h in range(len(arrCardTurnPlayer1)):
-        print(arrCardTurnPlayer1[h])
-    print("cartas turno jugador 2 :")
-    for h in range(len(arrCardTurnPlayer2)):
-        print(arrCardTurnPlayer2[h])
+        #Mostramos las cartas de mano de turno de cada jugador
+        print("cartas turno jugador 1 :")
+        for h in range(len(arrCardTurnPlayer1)):
+            print(arrCardTurnPlayer1[h])
+        print("cartas turno jugador 2 :")
+        for h in range(len(arrCardTurnPlayer2)):
+            print(arrCardTurnPlayer2[h])
 
-    print()
-    print()
+        print()
+        print()
 
-    confrontacion(jugador1, jugador2)
+        confrontacion(jugador1, jugador2, arrCardTurnPlayer1, arrCardTurnPlayer2)
 
-    turno = turno + 1
+        turno = turno + 1
 
-    print()
+        print()
+
+    if jugador1.life > 0:
+        jugador1.victoryPoints = jugador1.victoryPoints + 20
+    elif jugador2.life > 0:
+        jugador2.victoryPoints = jugador2.victoryPoints + 20
+
