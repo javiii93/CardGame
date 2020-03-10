@@ -129,6 +129,9 @@ def menu_principal():
     print("*********************************\n")
     print("1. Cargar cartas")
     print("2. Carga cartas Enemigo")
+    print("11. Luchar Jugador vs Jugador")
+    print("12. Luchar Jugador vs Bot (arcade)")
+    print("13. Luchar Jugador vs Bot (liga)")
     print("14. Salir")
 
 
@@ -148,14 +151,6 @@ def menu_crear_mazo_enemigo():
     print("8. Crear mazo ofensivo Enemigo")
     print("9. Crear mazo defensivo Enemigo")
     print("10. Crear mazo equilibrado Enemigo")
-
-def menu_combate():
-    print("\nMENU COMBATE")
-    print("*********************************\n")
-    print("11. Luchar Jugador vs Jugador")
-    print("12. Luchar Jugador vs Bot (arcade)")
-    print("13. Luchar Jugador vs Bot (liga)")
-
 
 opt = 0
 
@@ -203,7 +198,10 @@ while opt != 14:
 
         # Opt to fight
         elif opt == 11:
-            case_11()
+            if not playerPrueba.arrCards and not enemyPrueba.arrCards:
+                print("No se puede ejecutar esta opcion hasta que se hayan cargado mazos para cada jugador.")
+            else:
+                case_11()
         elif opt == 12:
             case_12()
         elif opt == 13:
