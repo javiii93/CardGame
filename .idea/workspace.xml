@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45c84299-414a-438c-b0f2-a7b1d91ab6a4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/PruebaLucharJugadorvsJugador_liga.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/CardGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CardGame.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PruebaInstanciaParametro.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/PruebaInstanciaParametro.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PruebaLucharJugadorvsJugador.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/PruebaLucharJugadorvsJugador.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PruebaLucharJugadorvsBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/PruebaLucharJugadorvsBot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +41,18 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Python.Main (1)">
     <configuration name="Main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
