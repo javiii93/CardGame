@@ -8,7 +8,7 @@ from src.Player import Player
 
 
 #  Lectura de los XML
-from src.PruebaLucharJugadorvsJugador import ejecutarPartida
+from src.PruebaLucharJugadorvsJugador import ejecutarPartida, ligaSantander
 
 tree = ALL.parse('xml_dtd/myBaraja.xml')
 rootPlayer = tree.getroot()
@@ -16,8 +16,11 @@ tree2 = ALL.parse('xml_dtd/Enemigo.xml')
 rootEnemy = tree2.getroot()
 
 # declaracion del player y el enemy para hacer pruebas
+arrPlayer=[]
 playerPrueba=Player('Luisito Comunica')
 enemyPrueba=Player('Sergio Pujol')
+arrPlayer.append(playerPrueba)
+arrPlayer.append(enemyPrueba)
 
 # Funcion para leer XML del jugador local
 def case_1():
@@ -114,6 +117,7 @@ def case_12():
 
 def case_13():
     print("Luchar jugador vs Bot (Lliga)")
+    ligaSantander(arrPlayer)
 
 
 def case_14():
@@ -129,6 +133,9 @@ def menu_principal():
     print("*********************************\n")
     print("1. Cargar cartas")
     print("2. Carga cartas Enemigo")
+    print("11. Luchar Jugador vs Jugador")
+    print("12. Luchar Jugador vs Bot (arcade)")
+    print("13. Luchar Jugador vs Bot (liga)")
     print("14. Salir")
 
 
@@ -148,15 +155,6 @@ def menu_crear_mazo_enemigo():
     print("8. Crear mazo ofensivo Enemigo")
     print("9. Crear mazo defensivo Enemigo")
     print("10. Crear mazo equilibrado Enemigo")
-
-
-def menu_combate():
-    print("\nMENU COMBATE")
-    print("*********************************\n")
-    print("11. Luchar Jugador vs Jugador")
-    print("12. Luchar Jugador vs Bot (arcade)")
-    print("13. Luchar Jugador vs Bot (liga)")
-
 
 opt = 0
 
@@ -204,7 +202,10 @@ while opt != 14:
 
         # Opt to fight
         elif opt == 11:
-            case_11()
+            if not playerPrueba.arrCards or not enemyPrueba.arrCards:
+                print("No se puede ejecutar esta opcion hasta que se hayan cargado mazos para cada jugador.")
+            else:
+                case_11()
         elif opt == 12:
             case_12()
         elif opt == 13:

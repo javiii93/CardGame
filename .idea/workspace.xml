@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45c84299-414a-438c-b0f2-a7b1d91ab6a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CardGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CardGame.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PruebaLucharJugadorvsBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/PruebaLucharJugadorvsBot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PruebaLucharJugadorvsJugador.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/PruebaLucharJugadorvsJugador.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,14 +33,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.project" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.PruebaLucharJugadorvsBot">
+  <component name="RunManager" selected="Python.Main (1)">
     <configuration name="Main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CardGame" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -157,11 +155,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.PruebaLucharJugadorvsBot" />
         <item itemvalue="Python.Main (1)" />
         <item itemvalue="Python.PruebaLucharJugadorvsJugador" />
         <item itemvalue="Python.PruebaInstanciaParametro" />
         <item itemvalue="Python.Main" />
+        <item itemvalue="Python.PruebaLucharJugadorvsBot" />
       </list>
     </recent_temporary>
   </component>
@@ -265,26 +263,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="443" y="0" width="938" height="810" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582191032277" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1583826897019">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1581686489795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583826897019" />
-    <state width="1515" height="208" key="GridCell.Tab.0.bottom" timestamp="1583828725294">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1581686489795" />
+    <state width="1515" height="250" key="GridCell.Tab.0.bottom" timestamp="1583828367649">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583828725294" />
-    <state width="1515" height="208" key="GridCell.Tab.0.center" timestamp="1583828725294">
+    <state width="1515" height="250" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583828367649" />
+    <state width="1515" height="250" key="GridCell.Tab.0.center" timestamp="1583828367649">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583828725294" />
-    <state width="1515" height="208" key="GridCell.Tab.0.left" timestamp="1583828725294">
+    <state width="1515" height="250" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583828367649" />
+    <state width="1515" height="250" key="GridCell.Tab.0.left" timestamp="1583828367649">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583828725294" />
-    <state width="1515" height="208" key="GridCell.Tab.0.right" timestamp="1583828725294">
+    <state width="1515" height="250" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583828367649" />
+    <state width="1515" height="250" key="GridCell.Tab.0.right" timestamp="1583828367649">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583828725294" />
+    <state width="1515" height="250" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583828367649" />
     <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1581682632360">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -309,14 +307,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="481" y="128" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1582190796918" />
-    <state x="277" y="55" key="SettingsEditor" timestamp="1583828980985">
+    <state x="277" y="55" key="SettingsEditor" timestamp="1583828074448">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583828980985" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1583826791191">
+    <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583828074448" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1582903433918">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583826791191" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1582903433918" />
     <state x="554" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582191180664">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

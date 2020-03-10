@@ -193,3 +193,13 @@ def ejecutarPartida(jugador1, jugador2):
     elif jugador2.life > 0:
         jugador2.victoryPoints = jugador2.victoryPoints + 20
 
+def ligaSantander(arrPlayers):
+    if not arrPlayers or len(arrPlayers) <= 1:
+        print("List is empty or list got just 1 player")
+    else:
+        for h in range(len(arrPlayers)):
+            for i in range(len(arrPlayers)):
+                if (not arrPlayers[h] == arrPlayers[i]):
+                    ejecutarPartida(arrPlayers[h], arrPlayers[i])
+        for m in range(len(arrPlayers)):
+            print("Le jugador "+arrPlayers[m].name+" tiene "+arrPlayers[m].victoryPoints+" puntos en esta liga")
