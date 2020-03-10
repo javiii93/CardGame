@@ -38,3 +38,7 @@ dano = 0
 while dano < 10:
     dano = dano + 1
     print(dano)
+
+def ligaSantander(arrPlayers):
+    if not arrPlayers:
+        print("List is empty")
