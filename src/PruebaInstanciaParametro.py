@@ -40,5 +40,10 @@ while dano < 10:
     print(dano)
 
 def ligaSantander(arrPlayers):
-    if not arrPlayers:
-        print("List is empty")
+    if not arrPlayers or len(arrPlayers)<=1:
+        print("List is empty or list got just 1 player")
+    else:
+        for h in range(len(arrPlayers)):
+            for i in range(len(arrPlayers)):
+                if(not arrPlayers[h]==arrPlayers[i]):
+                    ejecutarPartida(arrPlayers[h], arrPlayers[i])   

@@ -149,7 +149,6 @@ def menu_crear_mazo_enemigo():
     print("9. Crear mazo defensivo Enemigo")
     print("10. Crear mazo equilibrado Enemigo")
 
-
 def menu_combate():
     print("\nMENU COMBATE")
     print("*********************************\n")
