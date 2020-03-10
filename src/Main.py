@@ -8,7 +8,8 @@ from src.Player import Player
 
 
 #  Lectura de los XML
-from src.PruebaLucharJugadorvsJugador import ejecutarPartida, ligaSantander
+from src.PruebaLucharJugadorvsJugador import ejecutarPartida
+from src.PruebaLucharJugadorvsJugador_liga import ligaSantander
 
 tree = ALL.parse('xml_dtd/myBaraja.xml')
 rootPlayer = tree.getroot()

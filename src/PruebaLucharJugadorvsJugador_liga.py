@@ -60,7 +60,7 @@ def confrontacionLiga(jugador1, jugador2, arrCardTurnPlayer1, arrCardTurnPlayer2
             for indexCardTurn in range(0,len(arrCardTurnPlayer1)): #Recorremos cada carta de la mano del jugador ofensivo para atacar
                 if indexCardTurn < len(arrCardTurnPlayer2):#si el jugador defensivo tiene una carta para defenderse se hace la pelea
                                                            #entre las cartas
-                    danoPorCiclo = danoPorCiclo + peleaCartas(indexCardTurn, arrCardTurnPlayer1, arrCardTurnPlayer2, jugador2)
+                    danoPorCiclo = danoPorCiclo + peleaCartasLiga(indexCardTurn, arrCardTurnPlayer1, arrCardTurnPlayer2, jugador2)
                 else:#si el jugador defensivo no tiene cartas para defenderse se le restan los puntos de ataque de la
                      #ofensiva directamente a sus puntos de vida
                     jugador2.life = int(jugador2.life) - int(arrCardTurnPlayer1[indexCardTurn].attack)
@@ -68,14 +68,10 @@ def confrontacionLiga(jugador1, jugador2, arrCardTurnPlayer1, arrCardTurnPlayer2
                 for indexCardTurn in range(0,len(arrCardTurnPlayer2)):#Recorremos cada carta de la mano del jugador ofensivo para atacar
                     if indexCardTurn < len(arrCardTurnPlayer1):#si el jugador defensivo tiene una carta para defenderse se hace la pelea
                                                                #entre las cartas
-                        danoPorCiclo = danoPorCiclo + peleaCartas(indexCardTurn, arrCardTurnPlayer2, arrCardTurnPlayer1, jugador1)
+                        danoPorCiclo = danoPorCiclo + peleaCartasLiga(indexCardTurn, arrCardTurnPlayer2, arrCardTurnPlayer1, jugador1)
                     else:#si el jugador defensivo no tiene cartas para defenderse se le restan los puntos de ataque de la
                          #ofensiva directamente a sus puntos de vida
                         jugador1.life = int(jugador1.life) - int(arrCardTurnPlayer2[indexCardTurn].attack)
-            if jugador1.life <= 0:
-                print("El jugador ", jugador2.name, " ha ganado la partida.")
-            if jugador2.life <= 0:
-                print("El jugador ", jugador1.name, " ha ganado la partida.")
             if danoPorCiclo == 0: #si no han habido peleas de cartas con danos cerramos el turno
                 break
 
@@ -85,7 +81,7 @@ def confrontacionLiga(jugador1, jugador2, arrCardTurnPlayer1, arrCardTurnPlayer2
             for indexCardTurn in range(0,len(arrCardTurnPlayer2)):#Recorremos cada carta de la mano del jugador ofensivo para atacar
                 if indexCardTurn < len(arrCardTurnPlayer1):#si el jugador defensivo tiene una carta para defenderse se hace la pelea
                                                            #entre las cartas
-                    danoPorCiclo = danoPorCiclo + peleaCartas(indexCardTurn, arrCardTurnPlayer2, arrCardTurnPlayer1, jugador1)
+                    danoPorCiclo = danoPorCiclo + peleaCartasLiga(indexCardTurn, arrCardTurnPlayer2, arrCardTurnPlayer1, jugador1)
                 else:#si el jugador defensivo no tiene cartas para defenderse se le restan los puntos de ataque de la
                      #ofensiva directamente a sus puntos de vida
                     jugador1.life = int(jugador1.life) - int(arrCardTurnPlayer2[indexCardTurn].attack)
@@ -93,14 +89,11 @@ def confrontacionLiga(jugador1, jugador2, arrCardTurnPlayer1, arrCardTurnPlayer2
                 for indexCardTurn in range(0,len(arrCardTurnPlayer1)):#Recorremos cada carta de la mano del jugador ofensivo para atacar
                     if indexCardTurn < len(arrCardTurnPlayer2):#si el jugador defensivo tiene una carta para defenderse se hace la pelea
                                                                #entre las cartas
-                       danoPorCiclo = danoPorCiclo + peleaCartas(indexCardTurn, arrCardTurnPlayer1, arrCardTurnPlayer2, jugador2)
+                       danoPorCiclo = danoPorCiclo + peleaCartasLiga(indexCardTurn, arrCardTurnPlayer1, arrCardTurnPlayer2, jugador2)
                     else:#si el jugador defensivo no tiene cartas para defenderse se le restan los puntos de ataque de la
                          #ofensiva directamente a sus puntos de vida
                         jugador2.life = int(jugador2.life) - int(arrCardTurnPlayer1[indexCardTurn].attack)
-            if jugador1.life <= 0:
-                print("El jugador ", jugador2.name, " ha ganado la partida.")
-            if jugador2.life <= 0:
-                print("El jugador ", jugador1.name, " ha ganado la partida.")
+
             if danoPorCiclo == 0:#si no han habido peleas de cartas con danos cerramos el turno
                 break
 
@@ -142,7 +135,7 @@ def comparaAtaqueDefensaLiga(indexCardTurn, ofCard, defCard, defPlayer, arrCardD
 
 
 # EJECUCION DE LAS FUNCIONES
-def ejecutarPartida(jugador1, jugador2):
+def ejecutarPartidaLiga(jugador1, jugador2):
     turno = 1
     while jugador1.life > 0 and jugador2.life > 0:
         #A cada jugador se le asocia unas cartas de turno a partir de su mazo
@@ -165,9 +158,22 @@ def ejecutarPartida(jugador1, jugador2):
         turno = turno + 1
 
         #print()
-
+    if jugador1.life <= 0:
+        print("El jugador ", jugador2.name, " ha ganado la partida.")
+    if jugador2.life <= 0:
+        print("El jugador ", jugador1.name, " ha ganado la partida.")
     if jugador1.life > 0:
         jugador1.victoryPoints = jugador1.victoryPoints + 20
     elif jugador2.life > 0:
         jugador2.victoryPoints = jugador2.victoryPoints + 20
 
+def ligaSantander(arrPlayers):
+    if not arrPlayers or len(arrPlayers) <= 1:
+        print("List is empty or list got just 1 player")
+    else:
+        for h in range(len(arrPlayers)):
+            for i in range(len(arrPlayers)):
+                if (not arrPlayers[h] == arrPlayers[i]):
+                    ejecutarPartidaLiga(arrPlayers[h], arrPlayers[i])
+        for m in range(len(arrPlayers)):
+            print("Le jugador "+str(arrPlayers[m].name)+" tiene "+str(arrPlayers[m].victoryPoints)+" puntos en esta liga")
