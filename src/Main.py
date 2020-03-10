@@ -106,7 +106,6 @@ def case_10():
 def case_11():
     print("Luchar jugador vs jugador")
 
-
 def case_12():
     print("Luchar jugador vs Bot(Arcade)")
 
