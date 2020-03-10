@@ -201,3 +201,5 @@ def ligaSantander(arrPlayers):
             for i in range(len(arrPlayers)):
                 if (not arrPlayers[h] == arrPlayers[i]):
                     ejecutarPartida(arrPlayers[h], arrPlayers[i])
+        for m in range(len(arrPlayers)):
+            print("Le jugador "+arrPlayers[m].name+" tiene "+arrPlayers[m].victoryPoints+" puntos en esta liga")
