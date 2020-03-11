@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45c84299-414a-438c-b0f2-a7b1d91ab6a4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/PruebaAlgoritmoLiga.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/CardGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CardGame.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Luchar_jugador_vs_jugador_liga.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Luchar_jugador_vs_jugador_liga.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PruebasVarias.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/PruebasVarias.py" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,28 +43,19 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Main (1)">
-    <configuration name="Crear_jugadores" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CardGame" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Crear_jugadores.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.PruebaAlgoritmoLiga">
     <configuration name="Luchar_jugador_vs_jugador" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CardGame" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -129,6 +119,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="PruebaAlgoritmoLiga" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CardGame" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/PruebaAlgoritmoLiga.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="PruebaInstanciaParametro" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CardGame" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -154,16 +165,16 @@
       <item itemvalue="Python.Main (1)" />
       <item itemvalue="Python.Main" />
       <item itemvalue="Python.PruebaInstanciaParametro" />
-      <item itemvalue="Python.Crear_jugadores" />
       <item itemvalue="Python.Luchar_jugador_vs_jugador" />
+      <item itemvalue="Python.PruebaAlgoritmoLiga" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.PruebaAlgoritmoLiga" />
         <item itemvalue="Python.Main (1)" />
         <item itemvalue="Python.Luchar_jugador_vs_jugador" />
         <item itemvalue="Python.PruebaInstanciaParametro" />
         <item itemvalue="Python.Main" />
-        <item itemvalue="Python.Crear_jugadores" />
       </list>
     </recent_temporary>
   </component>
