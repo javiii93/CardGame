@@ -122,6 +122,25 @@ def case_12():
     ejecutarPartida(localPlayer, playerClone)
 
 def case_13():
+    arrPlayer = []
+    randomPlayer1 = Player('1')
+    randomPlayer2 = Player('2')
+    randomPlayer3 = Player('3')
+    randomPlayer4 = Player('4')
+    randomPlayer5 = Player('5')
+    randomPlayer6 = Player('6')
+    randomPlayer1.arrCards = arrRandomCards(rootPlayer)
+    randomPlayer2.arrCards = arrRandomCards(rootPlayer)
+    randomPlayer3.arrCards = arrRandomCards(rootPlayer)
+    randomPlayer4.arrCards = arrRandomCards(rootPlayer)
+    randomPlayer5.arrCards = arrRandomCards(rootPlayer)
+    randomPlayer6.arrCards = arrRandomCards(rootPlayer)
+    arrPlayer.append(randomPlayer1)
+    arrPlayer.append(randomPlayer2)
+    arrPlayer.append(randomPlayer3)
+    arrPlayer.append(randomPlayer4)
+    arrPlayer.append(randomPlayer5)
+    arrPlayer.append(randomPlayer6)
     print("Luchar jugador vs Bot (Lliga)")
     ligaSantander(arrPlayer)
 
