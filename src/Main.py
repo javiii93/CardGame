@@ -17,11 +17,8 @@ tree2 = ALL.parse('xml_dtd/Enemigo.xml')
 rootEnemy = tree2.getroot()
 
 # declaracion del player y el enemy
-arrPlayer=[]
 localPlayer=Player('local')
 enemyPlayer=Player('enemigo')
-arrPlayer.append(localPlayer)
-arrPlayer.append(enemyPlayer)
 
 # Declaracion del clone del jugador local y asigncion de un mazo aleatorio
 playerClone=Player('Computadora')
