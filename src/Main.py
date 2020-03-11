@@ -1,4 +1,4 @@
-# --- MENU ENTREGA FASE 1 ---
+# --- MENU ENTREGA FASE 3 ---
 
 import xml.etree.ElementTree as ALL
 from src import LecturaXML
@@ -16,12 +16,17 @@ rootPlayer = tree.getroot()
 tree2 = ALL.parse('xml_dtd/Enemigo.xml')
 rootEnemy = tree2.getroot()
 
-# declaracion del player y el enemy para hacer pruebas
+# declaracion del player y el enemy
 arrPlayer=[]
 playerPrueba=Player('Luisito Comunica')
 enemyPrueba=Player('Sergio Pujol')
 arrPlayer.append(playerPrueba)
 arrPlayer.append(enemyPrueba)
+
+# Declaracion del clone del jugador local y asigncion de un mazo aleatorio
+playerClone=Player('Computadora')
+playerClone.arrCards=arrRandomCards(rootPlayer)
+
 
 # Funcion para leer XML del jugador local
 def case_1():
@@ -114,7 +119,7 @@ def case_11():
 
 def case_12():
     print("Luchar jugador vs Bot(Arcade)")
-
+    ejecutarPartida(playerPrueba, playerClone)
 
 def case_13():
     print("Luchar jugador vs Bot (Lliga)")
@@ -208,7 +213,10 @@ while opt != 14:
             else:
                 case_11()
         elif opt == 12:
-            case_12()
+            if not playerPrueba.arrCards:
+                print("No se puede ejecutar esta opcion hasta que se hayan cargado mazos para cada jugador.")
+            else:
+                case_12()
         elif opt == 13:
             case_13()
         # Opt to exit and default
