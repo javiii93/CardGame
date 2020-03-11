@@ -132,22 +132,22 @@ def peleaCartas(indexCardTurn, arrCardOfPlayer, arrCardDefPlayer, defPlayer):
         # si el ataque resultante es superior a la defensa de la carta defensiva entenonces se elimina la carta defensiva
         #y los puntos restante se restan a la vida del jugador defensivo (funcion comparaAtaqueDefensa). Si la defensa
         #es superior al ataque no pasa nada. Mismo comentario para las otras situaciones.
-        if(arrCardOfPlayer[indexCardTurn].attack*2 > arrCardDefPlayer[indexCardTurn].defense):
+        if(arrCardOfPlayer[indexCardTurn].attack*2 >= arrCardDefPlayer[indexCardTurn].defense):
             dano = comparaAtaqueDefensa(indexCardTurn, arrCardOfPlayer[indexCardTurn], arrCardDefPlayer[indexCardTurn], defPlayer, arrCardDefPlayer, 2)
         return dano
     # lancer vs chivalry -> modificador de ataque por 2 a lancer
     elif (arrCardOfPlayer[indexCardTurn].type == "lancer" and arrCardDefPlayer[indexCardTurn].type == "chivalry"):
-        if (arrCardOfPlayer[indexCardTurn].attack * 2 > arrCardDefPlayer[indexCardTurn].defense):
+        if (arrCardOfPlayer[indexCardTurn].attack * 2 >= arrCardDefPlayer[indexCardTurn].defense):
             dano = comparaAtaqueDefensa(indexCardTurn, arrCardOfPlayer[indexCardTurn], arrCardDefPlayer[indexCardTurn], defPlayer, arrCardDefPlayer, 2)
         return dano
     # chivalry vs infantry -> modificador de ataque por 2 a chivalry
     elif (arrCardOfPlayer[indexCardTurn].type == "chivalry" and arrCardDefPlayer[indexCardTurn].type == "infantry"):
-        if (arrCardOfPlayer[indexCardTurn].attack * 2 > arrCardDefPlayer[indexCardTurn].defense):
+        if (arrCardOfPlayer[indexCardTurn].attack * 2 >= arrCardDefPlayer[indexCardTurn].defense):
             dano = comparaAtaqueDefensa(indexCardTurn, arrCardOfPlayer[indexCardTurn], arrCardDefPlayer[indexCardTurn], defPlayer, arrCardDefPlayer, 2)
         return dano
     # en los otros casos el modificador es 1
     else:
-        if (arrCardOfPlayer[indexCardTurn].attack > arrCardDefPlayer[indexCardTurn].defense):
+        if (arrCardOfPlayer[indexCardTurn].attack >= arrCardDefPlayer[indexCardTurn].defense):
             dano = comparaAtaqueDefensa(indexCardTurn, arrCardOfPlayer[indexCardTurn], arrCardDefPlayer[indexCardTurn], defPlayer, arrCardDefPlayer, 1)
         return dano
 
