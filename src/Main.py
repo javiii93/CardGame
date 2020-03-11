@@ -8,8 +8,8 @@ from src.Player import Player
 
 
 #  Lectura de los XML
-from src.PruebaLucharJugadorvsJugador import ejecutarPartida
-from src.PruebaLucharJugadorvsJugador_liga import ligaSantander
+from src.Luchar_jugador_vs_jugador import ejecutarPartida
+from src.Luchar_jugador_vs_jugador_liga import ligaSantander
 
 tree = ALL.parse('xml_dtd/myBaraja.xml')
 rootPlayer = tree.getroot()
@@ -18,10 +18,10 @@ rootEnemy = tree2.getroot()
 
 # declaracion del player y el enemy
 arrPlayer=[]
-playerPrueba=Player('Luisito Comunica')
-enemyPrueba=Player('Sergio Pujol')
-arrPlayer.append(playerPrueba)
-arrPlayer.append(enemyPrueba)
+localPlayer=Player('local')
+enemyPlayer=Player('enemigo')
+arrPlayer.append(localPlayer)
+arrPlayer.append(enemyPlayer)
 
 # Declaracion del clone del jugador local y asigncion de un mazo aleatorio
 playerClone=Player('Computadora')
@@ -50,76 +50,76 @@ def case_2():
 def case_3():
     print("\nCREAR MAZO ALEATORIO PLAYER/n")
     print("*********************************\n")
-    playerPrueba.arrCards=arrRandomCards(rootPlayer)
-    for h in range(len(playerPrueba.arrCards)):
-        print(playerPrueba.arrCards[h])
+    localPlayer.arrCards=arrRandomCards(rootPlayer)
+    for h in range(len(localPlayer.arrCards)):
+        print(localPlayer.arrCards[h])
 
 
 # Funcion crear mazo ofensivo del jugador local
 def case_4():
     print("\nCREAR MAZO OFENSIVO PLAYER/n")
     print("*********************************\n")
-    playerPrueba.arrCards = arrOfCards(rootPlayer)
-    for h in range(len(playerPrueba.arrCards)):
-        print(playerPrueba.arrCards[h])
+    localPlayer.arrCards = arrOfCards(rootPlayer)
+    for h in range(len(localPlayer.arrCards)):
+        print(localPlayer.arrCards[h])
 
 # Funcion crear mazo defensivo del jugador local
 def case_5():
     print("\nCREAR MAZO DEFENSIVO PLAYER/n")
     print("*********************************\n")
-    playerPrueba.arrCards = arrDefCards(rootPlayer)
-    for h in range(len(playerPrueba.arrCards)):
-        print(playerPrueba.arrCards[h])
+    localPlayer.arrCards = arrDefCards(rootPlayer)
+    for h in range(len(localPlayer.arrCards)):
+        print(localPlayer.arrCards[h])
 
 # Funcion crear mazo equilibrado del jugador local
 def case_6():
     print("\nCREAR MAZO EQUILIBRADO PLAYER/n")
     print("*********************************\n")
-    playerPrueba.arrCards = arrEqCards(rootPlayer)
-    for h in range(len(playerPrueba.arrCards)):
-        print(playerPrueba.arrCards[h])
+    localPlayer.arrCards = arrEqCards(rootPlayer)
+    for h in range(len(localPlayer.arrCards)):
+        print(localPlayer.arrCards[h])
 
 # Funcion crear mazo aleatorio del jugador enemigo
 def case_7():
     print("\nCREAR MAZO ALEATORIO ENEMY/n")
     print("*********************************\n")
-    enemyPrueba.arrCards = arrRandomCards(rootEnemy)
-    for h in range(len(enemyPrueba.arrCards)):
-        print(enemyPrueba.arrCards[h])
+    enemyPlayer.arrCards = arrRandomCards(rootEnemy)
+    for h in range(len(enemyPlayer.arrCards)):
+        print(enemyPlayer.arrCards[h])
 
 # Funcion crear mazo ofensivo del jugador enemigo
 def case_8():
     print("\nCREAR MAZO OFENSIVO ENEMY/n")
     print("*********************************\n")
-    enemyPrueba.arrCards = arrOfCards(rootEnemy)
-    for h in range(len(enemyPrueba.arrCards)):
-        print(enemyPrueba.arrCards[h])
+    enemyPlayer.arrCards = arrOfCards(rootEnemy)
+    for h in range(len(enemyPlayer.arrCards)):
+        print(enemyPlayer.arrCards[h])
 
 # Funcion crear mazo defensivo del jugador enemigo
 def case_9():
     print("\nCREAR MAZO DEFENSIVO ENEMY/n")
     print("*********************************\n")
-    enemyPrueba.arrCards = arrDefCards(rootEnemy)
-    for h in range(len(enemyPrueba.arrCards)):
-        print(enemyPrueba.arrCards[h])
+    enemyPlayer.arrCards = arrDefCards(rootEnemy)
+    for h in range(len(enemyPlayer.arrCards)):
+        print(enemyPlayer.arrCards[h])
 
 # Funcion crear mazo equilibrado del jugador enemigo
 def case_10():
     print("\nCREAR MAZO EQUILIBRADO ENEMY/n")
     print("*********************************\n")
-    enemyPrueba.arrCards = arrEqCards(rootEnemy)
+    enemyPlayer.arrCards = arrEqCards(rootEnemy)
 
-    for h in range(len(enemyPrueba.arrCards)):
-        print(enemyPrueba.arrCards[h])
+    for h in range(len(enemyPlayer.arrCards)):
+        print(enemyPlayer.arrCards[h])
 
 
 def case_11():
     print("Luchar jugador vs jugador")
-    ejecutarPartida(playerPrueba, enemyPrueba)
+    ejecutarPartida(localPlayer, enemyPlayer)
 
 def case_12():
     print("Luchar jugador vs Bot(Arcade)")
-    ejecutarPartida(playerPrueba, playerClone)
+    ejecutarPartida(localPlayer, playerClone)
 
 def case_13():
     print("Luchar jugador vs Bot (Lliga)")
@@ -208,12 +208,12 @@ while opt != 14:
 
         # Opt to fight
         elif opt == 11:
-            if not playerPrueba.arrCards or not enemyPrueba.arrCards:
+            if not localPlayer.arrCards or not enemyPlayer.arrCards:
                 print("No se puede ejecutar esta opcion hasta que se hayan cargado mazos para cada jugador.")
             else:
                 case_11()
         elif opt == 12:
-            if not playerPrueba.arrCards:
+            if not localPlayer.arrCards:
                 print("No se puede ejecutar esta opcion hasta que se hayan cargado mazos para cada jugador.")
             else:
                 case_12()

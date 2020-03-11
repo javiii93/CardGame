@@ -1,7 +1,7 @@
 #lista de diccionarios Python
 import xml.etree.ElementTree as ALL
 from random import randint
-from src.PruebaLucharJugadorvsJugador import randomNumArray10, destino
+from src.Luchar_jugador_vs_jugador import randomNumArray10, destino
 from src.Card import Card
 from src.MazoAleatorio import arrRandomCards
 from src.Player import Player
