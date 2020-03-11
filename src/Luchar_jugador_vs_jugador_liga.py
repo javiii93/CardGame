@@ -33,6 +33,9 @@ from src.Player import Player
 
 #Funcion crear las cartas de mano de un jugador para un turno. Escoger cartas aleaoriamente hasta consumir los cinco
 #puntos de invocacion de que tiene el jugador por turno
+from src.PruebasVarias import archivoJornadas, archivoClasificaciones
+
+
 def invocacionLiga(jugador):
     #reiniciar puntos de invocacion del jugador a 5
     jugador.summonPoints = 5
@@ -135,7 +138,7 @@ def comparaAtaqueDefensaLiga(indexCardTurn, ofCard, defCard, defPlayer, arrCardD
 
 
 # EJECUCION DE LAS FUNCIONES
-def ejecutarPartidaLiga(jugador1, jugador2):
+def ejecutarPartidaLiga(jugador1, jugador2, ficheroJornada):
     turno = 1
     while jugador1.life > 0 and jugador2.life > 0:
         #A cada jugador se le asocia unas cartas de turno a partir de su mazo
@@ -160,20 +163,26 @@ def ejecutarPartidaLiga(jugador1, jugador2):
         #print()
     if jugador1.life <= 0:
         print("El jugador ", jugador2.name, " ha ganado la partida.")
+        resultado = "El jugador "+jugador2.name+" ha ganado la partida."
+        archivoJornadas(ficheroJornada, resultado)
     if jugador2.life <= 0:
         print("El jugador ", jugador1.name, " ha ganado la partida.")
+        resultado = "El jugador "+jugador1.name+" ha ganado la partida."
+        archivoJornadas(ficheroJornada, resultado)
     if jugador1.life > 0:
         jugador1.victoryPoints = jugador1.victoryPoints + 20
     elif jugador2.life > 0:
         jugador2.victoryPoints = jugador2.victoryPoints + 20
 
-def ligaSantander(arrPlayers):
+def ligaSantander(arrPlayers, ficheroJornada, ficheroClasificacion):
     if not arrPlayers or len(arrPlayers) <= 1:
         print("List is empty or list got just 1 player")
     else:
         for h in range(len(arrPlayers)):
             for i in range(len(arrPlayers)):
                 if (not arrPlayers[h] == arrPlayers[i]):
-                    ejecutarPartidaLiga(arrPlayers[h], arrPlayers[i])
+                    ejecutarPartidaLiga(arrPlayers[h], arrPlayers[i], ficheroJornada)
         for m in range(len(arrPlayers)):
             print("Le jugador "+str(arrPlayers[m].name)+" tiene "+str(arrPlayers[m].victoryPoints)+" puntos en esta liga")
+            resultadoClasificacion = "Le jugador "+str(arrPlayers[m].name)+" tiene "+str(arrPlayers[m].victoryPoints)+" puntos en esta liga"
+            archivoClasificaciones(ficheroClasificacion, resultadoClasificacion)

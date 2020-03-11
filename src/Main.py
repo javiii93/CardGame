@@ -11,6 +11,7 @@ from src.Player import Player
 from src.Luchar_jugador_vs_jugador import ejecutarPartida
 from src.Luchar_jugador_vs_jugador_liga import ligaSantander
 
+
 tree = ALL.parse('xml_dtd/myBaraja.xml')
 rootPlayer = tree.getroot()
 tree2 = ALL.parse('xml_dtd/Enemigo.xml')
@@ -139,7 +140,9 @@ def case_13():
     arrPlayer.append(randomPlayer5)
     arrPlayer.append(randomPlayer6)
     print("Luchar jugador vs Bot (Lliga)")
-    ligaSantander(arrPlayer)
+    ficheroJornada = open('Jornada', 'w')
+    ficheroClasificacion = open('Clasificacion', 'w')
+    ligaSantander(arrPlayer, ficheroJornada, ficheroClasificacion)
 
 
 def case_14():
