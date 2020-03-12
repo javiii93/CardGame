@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45c84299-414a-438c-b0f2-a7b1d91ab6a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CardGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CardGame.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Jornada" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jornada" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Luchar_jugador_vs_jugador_liga.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Luchar_jugador_vs_jugador_liga.py" afterDir="false" />
     </list>
@@ -172,8 +169,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.Main (1)" />
-        <item itemvalue="Python.PruebaAlgoritmoLiga" />
         <item itemvalue="Python.Luchar_jugador_vs_jugador" />
+        <item itemvalue="Python.PruebaAlgoritmoLiga" />
         <item itemvalue="Python.PruebaInstanciaParametro" />
         <item itemvalue="Python.Main" />
       </list>

@@ -162,19 +162,14 @@ def ejecutarPartidaLiga(jugador1, jugador2, ficheroJornada):
 
         turno = turno + 1
 
-        #print()
     if jugador1.life <= 0:
         print("El jugador ", jugador2.name, " ha ganado la partida.")
         resultado = "El jugador "+jugador2.name+" ha ganado la partida."
         archivoJornadas(ficheroJornada, resultado)
-        print("jugador 1 life :", jugador1.life)
-        print("jugador 2 life :", jugador2.life)
     if jugador2.life <= 0:
         print("El jugador ", jugador1.name, " ha ganado la partida.")
         resultado = "El jugador "+jugador1.name+" ha ganado la partida."
         archivoJornadas(ficheroJornada, resultado)
-        print("jugador 1 life :", jugador1.life)
-        print("jugador 2 life :", jugador2.life)
     if jugador1.life > 0:
         jugador1.victoryPoints = jugador1.victoryPoints + 20
     elif jugador2.life > 0:
@@ -195,9 +190,6 @@ def ligaSantander(arrPlayers, ficheroJornada, ficheroClasificacion):
 
     for i in range(len(matrice)):
         matrice[i] = [0] * 2
-
-    # for i in range(len(matrice)):
-    #    print(matrice[i])
 
     def partidos_aleatorios():
         i = 0
@@ -223,24 +215,8 @@ def ligaSantander(arrPlayers, ficheroJornada, ficheroClasificacion):
                     matrice[i][1] = jugador2
                     i = i + 1
 
-
-    for i in range(len(matrice)):
-        print(matrice[i])
-
-    for i in range(len(arrPlayers)):
-        for j in range(len(arrPlayers[i].arrCards)):
-            print(arrPlayers[i].arrCards[j])
-        print()
-
     partidos_aleatorios()
 
     for i in range(len(matrice)):
-        print(matrice[i])
-
-    for i in range(len(matrice)):
-        print(matrice[i][0])
-        print(matrice[i][1])
-        print()
-        #arrPlayers(matrice[i][0]).life = 10
-        #arrPlayers(matrice[i][1]).life = 10
+        print("--- Partido : ", matrice[i][0]+1, " vs ", matrice[i][1]+1, " ---")
         ejecutarPartidaLiga(arrPlayers[matrice[i][0]], arrPlayers[matrice[i][1]], ficheroJornada)
