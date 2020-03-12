@@ -137,7 +137,7 @@ def comparaAtaqueDefensaLiga(indexCardTurn, ofCard, defCard, defPlayer, arrCardD
 
 
 
-# EJECUCION DE LAS FUNCIONES
+#Funcion para ejecutar partida
 def ejecutarPartidaLiga(jugador1, jugador2, ficheroJornada):
     jugador1.life = 10
     jugador2.life = 10
