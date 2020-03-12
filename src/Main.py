@@ -139,7 +139,7 @@ def case_13():
     arrPlayer.append(randomPlayer4)
     arrPlayer.append(randomPlayer5)
     arrPlayer.append(randomPlayer6)
-    print("Luchar jugador vs Bot (Lliga)")
+    print("Luchar jugador vs Bot (Lliga, 6 jugadores)")
     contador = 0;
     jornada = 1;
     ligaSantander(arrPlayer, contador, jornada)

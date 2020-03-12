@@ -137,7 +137,7 @@ def comparaAtaqueDefensaLiga(indexCardTurn, ofCard, defCard, defPlayer, arrCardD
 
 
 
-# EJECUCION DE LAS FUNCIONES
+#Funcion para ejecutar partidas de liga
 def ejecutarPartidaLiga(jugador1, jugador2, ficheroJornada):
     jugador1.life = 10
     jugador2.life = 10
@@ -167,20 +167,18 @@ def ejecutarPartidaLiga(jugador1, jugador2, ficheroJornada):
         print("El jugador ", jugador2.name, " ha ganado la partida.")
         resultado = "El jugador "+jugador2.name+" ha ganado la partida."
         archivoJornadas(ficheroJornada, resultado)
-        print("jugador 1 life :", jugador1.life)
-        print("jugador 2 life :", jugador2.life)
     if jugador2.life <= 0:
         print("El jugador ", jugador1.name, " ha ganado la partida.")
         resultado = "El jugador "+jugador1.name+" ha ganado la partida."
         archivoJornadas(ficheroJornada, resultado)
-        print("jugador 1 life :", jugador1.life)
-        print("jugador 2 life :", jugador2.life)
     if jugador1.life > 0:
         jugador1.victoryPoints = jugador1.victoryPoints + 20
     elif jugador2.life > 0:
         jugador2.victoryPoints = jugador2.victoryPoints + 20
 
+#Funcion para ejecuta la liga
 def ligaSantander(arrPlayers, contador,jornada):
+    #funcion para calcular el numero de combinaciones posibles de un conjunto n con k elementos de ese conjunto
     def numerosCombinatorios(n, k):
         if k == 0:
             return 1
@@ -191,16 +189,15 @@ def ligaSantander(arrPlayers, contador,jornada):
 
     total = numerosCombinatorios(6, 2)
 
+    #Creacion de una matrice con un partido por fila (15 en total en este caso) y dos jugadores por fila. La matrice esta llena con 0.
     matrice = [[]] * total
-
     for i in range(len(matrice)):
         matrice[i] = [0] * 2
 
-    # for i in range(len(matrice)):
-    #    print(matrice[i])
-
+    #Funcion para llenar la matrice de partidos, con todas la combinaciones posibles de partidos entre los jugadores
+    #sin repetir partidos
     def partidos_aleatorios():
-        i = 0
+        i = 0 #contador para pasar al siguiente partido (fila de la matrice)
         while i < len(matrice):
             partidoHecho = False
 
@@ -209,48 +206,33 @@ def ligaSantander(arrPlayers, contador,jornada):
                 jugador1 = 0
                 jugador2 = 0
                 while jugador1 == jugador2:
-                    jugador1 = randint(0, 5)
+                    jugador1 = randint(0, 5)#tiramos un numero aleatorio entre las posiciones de array que contiene los jugadores
                     jugador2 = randint(0, 5)
 
-                for j in range(len(matrice)):
+                for j in range(len(matrice)):#buscamos si esa combinacion ya esta en la matrice
                     if (jugador1 == matrice[j][0] and jugador2 == matrice[j][1]) or (
                             jugador1 == matrice[j][1] and jugador2 == matrice[j][0]):
                         partidoHecho = True
                         break
 
-                if partidoHecho == False:
+                if partidoHecho == False:#si no esta la añadimos a la matrice
                     matrice[i][0] = jugador1
                     matrice[i][1] = jugador2
                     i = i + 1
 
-
-    for i in range(len(matrice)):
-        print(matrice[i])
-
-    for i in range(len(arrPlayers)):
-        for j in range(len(arrPlayers[i].arrCards)):
-            print(arrPlayers[i].arrCards[j])
-        print()
-
     partidos_aleatorios()
 
+    #Ejecutamos los partidos segun el "programa" establecido por la matrice que contiene todos los enfrentamientos posibles
     for i in range(len(matrice)):
-        print(matrice[i])
-
-    for i in range(len(matrice)):
-
-
-        print(matrice[i][0])
-        print(matrice[i][1])
-        print()
-        #arrPlayers(matrice[i][0]).life = 10
-        #arrPlayers(matrice[i][1]).life = 10
-
         if (contador % 5 == 0):
             resultado = 'Jornadas/Jornada' + str(jornada);
             ficheroJornada = open(resultado, 'w')
             jornada = jornada + 1;
             contador = contador + 1;
+        print("--- Partido ", matrice[i][0]+1, " vs ", matrice[i][1]+1, " ---")
         ejecutarPartidaLiga(arrPlayers[matrice[i][0]], arrPlayers[matrice[i][1]], ficheroJornada)
         contador = contador + 1;
+
+
+
 
