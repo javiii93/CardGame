@@ -175,47 +175,61 @@ def ejecutarPartidaLiga(jugador1, jugador2, ficheroJornada):
         jugador2.victoryPoints = jugador2.victoryPoints + 20
 
 def ligaSantander(arrPlayers, ficheroJornada, ficheroClasificacion):
-        def numerosCombinatorios(n, k):
-            if k == 0:
-                return 1
-            elif n == 0:
-                return 0
-            else:
-                return numerosCombinatorios(n - 1, k - 1) + numerosCombinatorios(n - 1, k)
+    def numerosCombinatorios(n, k):
+        if k == 0:
+            return 1
+        elif n == 0:
+            return 0
+        else:
+            return numerosCombinatorios(n - 1, k - 1) + numerosCombinatorios(n - 1, k)
 
-        numPosibilidades = numerosCombinatorios(6, 2)
+    total = numerosCombinatorios(6, 2)
 
-        matrice = [[]] * numPosibilidades
-        for i in range(len(matrice)):
-            matrice[i] = [0] * 2
+    matrice = [[]] * total
 
-        def matrice_partidos(matrice, numPosibilidades):
+    for i in range(len(matrice)):
+        matrice[i] = [0] * 2
 
-            i = 0
-            while i < len(matrice):
-                partidoHecho = False
+    # for i in range(len(matrice)):
+    #    print(matrice[i])
 
-                while partidoHecho == False:
+    def partidos_aleatorios():
+        i = 0
+        while i < len(matrice):
+            partidoHecho = False
 
-                    jugador1 = 0
-                    jugador2 = 0
-                    while jugador1 == jugador2:
-                        jugador1 = randint(1, 6)
-                        jugador2 = randint(1, 6)
+            while partidoHecho == False:
 
-                    for j in range(len(matrice)):
-                        if (jugador1 == matrice[j][0] and jugador2 == matrice[j][1]) or (
-                                jugador1 == matrice[j][1] and jugador2 == matrice[j][0]):
-                            partidoHecho = True
-                            break
+                jugador1 = 0
+                jugador2 = 0
+                while jugador1 == jugador2:
+                    jugador1 = randint(0, 5)
+                    jugador2 = randint(0, 5)
 
-                    if partidoHecho == False:
-                        matrice[i][0] = jugador1
-                        matrice[i][1] = jugador2
-                        i = i + 1
+                for j in range(len(matrice)):
+                    if (jugador1 == matrice[j][0] and jugador2 == matrice[j][1]) or (
+                            jugador1 == matrice[j][1] and jugador2 == matrice[j][0]):
+                        partidoHecho = True
+                        break
 
+                if partidoHecho == False:
+                    matrice[i][0] = jugador1
+                    matrice[i][1] = jugador2
+                    i = i + 1
 
-        matrice_partidos(matrice, numPosibilidades)
+    # print()
+    # matrice[5][1] = 10
+    # for i in range(len(matrice)):
+    #    print(matrice[i])
+    partidos_aleatorios()
 
-        for i in range(len(matrice)):
-            ejecutarPartidaLiga(arrPlayers[matrice[i][0]], arrPlayers[matrice[i][1]], ficheroJornada)
+    for i in range(len(matrice)):
+        print(matrice[i])
+
+    for i in range(len(matrice)):
+        print(matrice[i][0])
+        print(matrice[i][1])
+        print()
+        #arrPlayers(matrice[i][0])
+        #arrPlayers(matrice[i][1])
+        ejecutarPartidaLiga(arrPlayers[matrice[i][0]], arrPlayers[matrice[i][1]], ficheroJornada)

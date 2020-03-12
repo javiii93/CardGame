@@ -5,10 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/CardGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CardGame.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clasificacion" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clasificacion" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Jornada" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jornada" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Luchar_jugador_vs_jugador_liga.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Luchar_jugador_vs_jugador_liga.py" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,6 +43,18 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Python.Main (1)">
     <configuration name="Luchar_jugador_vs_jugador" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
