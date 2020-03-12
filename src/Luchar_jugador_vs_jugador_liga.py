@@ -33,7 +33,7 @@ rootPlayer = tree.getroot()
 
 #Funcion crear las cartas de mano de un jugador para un turno. Escoger cartas aleaoriamente hasta consumir los cinco
 #puntos de invocacion de que tiene el jugador por turno
-from src.PruebasVarias import archivoJornadas, archivoClasificaciones
+from src.creacionArchivos import archivoJornadas
 
 
 def invocacionLiga(jugador):
@@ -180,7 +180,7 @@ def ejecutarPartidaLiga(jugador1, jugador2, ficheroJornada):
     elif jugador2.life > 0:
         jugador2.victoryPoints = jugador2.victoryPoints + 20
 
-def ligaSantander(arrPlayers, ficheroJornada, ficheroClasificacion):
+def ligaSantander(arrPlayers, contador,jornada):
     def numerosCombinatorios(n, k):
         if k == 0:
             return 1
@@ -238,9 +238,19 @@ def ligaSantander(arrPlayers, ficheroJornada, ficheroClasificacion):
         print(matrice[i])
 
     for i in range(len(matrice)):
+
+
         print(matrice[i][0])
         print(matrice[i][1])
         print()
         #arrPlayers(matrice[i][0]).life = 10
         #arrPlayers(matrice[i][1]).life = 10
+
+        if (contador % 5 == 0):
+            resultado = 'Jornadas/Jornada' + str(jornada);
+            ficheroJornada = open(resultado, 'w')
+            jornada = jornada + 1;
+            contador = contador + 1;
         ejecutarPartidaLiga(arrPlayers[matrice[i][0]], arrPlayers[matrice[i][1]], ficheroJornada)
+        contador = contador + 1;
+

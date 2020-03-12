@@ -140,9 +140,9 @@ def case_13():
     arrPlayer.append(randomPlayer5)
     arrPlayer.append(randomPlayer6)
     print("Luchar jugador vs Bot (Lliga)")
-    ficheroJornada = open('Jornada', 'w')
-    ficheroClasificacion = open('Clasificacion', 'w')
-    ligaSantander(arrPlayer, ficheroJornada, ficheroClasificacion)
+    contador = 0;
+    jornada = 1;
+    ligaSantander(arrPlayer, contador, jornada)
 
 
 def case_14():
