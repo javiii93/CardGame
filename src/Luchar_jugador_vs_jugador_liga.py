@@ -176,6 +176,7 @@ def ejecutarPartidaLiga(jugador1, jugador2, ficheroJornada):
         jugador2.victoryPoints = jugador2.victoryPoints + 20
 
 def ligaSantander(arrPlayers, ficheroJornada, ficheroClasificacion):
+    #Funcion para calcular las combinaciones de un conjunto de n con k elementos de ese conjunto
     def numerosCombinatorios(n, k):
         if k == 0:
             return 1
@@ -186,11 +187,14 @@ def ligaSantander(arrPlayers, ficheroJornada, ficheroClasificacion):
 
     total = numerosCombinatorios(6, 2)
 
-    matrice = [[]] * total
 
+
+    # Creacion de una matrice que contenga todos los partidos (numero de filas y dos jugadores por partido) con valor 0 en cada posicion
+    matrice = [[]] * total
     for i in range(len(matrice)):
         matrice[i] = [0] * 2
 
+    # Funcion para llenar la matrice de los partidos con todas las combinaciones posibles de partidos entre los jugadores sin repeticiones
     def partidos_aleatorios():
         i = 0
         while i < len(matrice):
@@ -217,6 +221,7 @@ def ligaSantander(arrPlayers, ficheroJornada, ficheroClasificacion):
 
     partidos_aleatorios()
 
+    #Ejecutamos los partidos en orden segun el "programa" establecido por la matrice de partidos aleatorios
     for i in range(len(matrice)):
         print("--- Partido : ", matrice[i][0]+1, " vs ", matrice[i][1]+1, " ---")
         ejecutarPartidaLiga(arrPlayers[matrice[i][0]], arrPlayers[matrice[i][1]], ficheroJornada)
