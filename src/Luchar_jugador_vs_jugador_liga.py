@@ -6,8 +6,8 @@ from src.Card import Card
 from src.MazoAleatorio import arrRandomCards
 from src.Player import Player
 
-#tree = ALL.parse('xml_dtd/myBaraja.xml')
-#rootPlayer = tree.getroot()
+tree = ALL.parse('xml_dtd/myBaraja.xml')
+rootPlayer = tree.getroot()
 
 #Creacino de los mazos aleatorios para probar el alogoritmo
 #arrCard1 = arrRandomCards(rootPlayer)
@@ -139,6 +139,8 @@ def comparaAtaqueDefensaLiga(indexCardTurn, ofCard, defCard, defPlayer, arrCardD
 
 # EJECUCION DE LAS FUNCIONES
 def ejecutarPartidaLiga(jugador1, jugador2, ficheroJornada):
+    jugador1.life = 10
+    jugador2.life = 10
     turno = 1
     while jugador1.life > 0 and jugador2.life > 0:
         #A cada jugador se le asocia unas cartas de turno a partir de su mazo
@@ -165,10 +167,14 @@ def ejecutarPartidaLiga(jugador1, jugador2, ficheroJornada):
         print("El jugador ", jugador2.name, " ha ganado la partida.")
         resultado = "El jugador "+jugador2.name+" ha ganado la partida."
         archivoJornadas(ficheroJornada, resultado)
+        print("jugador 1 life :", jugador1.life)
+        print("jugador 2 life :", jugador2.life)
     if jugador2.life <= 0:
         print("El jugador ", jugador1.name, " ha ganado la partida.")
         resultado = "El jugador "+jugador1.name+" ha ganado la partida."
         archivoJornadas(ficheroJornada, resultado)
+        print("jugador 1 life :", jugador1.life)
+        print("jugador 2 life :", jugador2.life)
     if jugador1.life > 0:
         jugador1.victoryPoints = jugador1.victoryPoints + 20
     elif jugador2.life > 0:
@@ -217,10 +223,15 @@ def ligaSantander(arrPlayers, ficheroJornada, ficheroClasificacion):
                     matrice[i][1] = jugador2
                     i = i + 1
 
-    # print()
-    # matrice[5][1] = 10
-    # for i in range(len(matrice)):
-    #    print(matrice[i])
+
+    for i in range(len(matrice)):
+        print(matrice[i])
+
+    for i in range(len(arrPlayers)):
+        for j in range(len(arrPlayers[i].arrCards)):
+            print(arrPlayers[i].arrCards[j])
+        print()
+
     partidos_aleatorios()
 
     for i in range(len(matrice)):
@@ -230,6 +241,6 @@ def ligaSantander(arrPlayers, ficheroJornada, ficheroClasificacion):
         print(matrice[i][0])
         print(matrice[i][1])
         print()
-        #arrPlayers(matrice[i][0])
-        #arrPlayers(matrice[i][1])
+        #arrPlayers(matrice[i][0]).life = 10
+        #arrPlayers(matrice[i][1]).life = 10
         ejecutarPartidaLiga(arrPlayers[matrice[i][0]], arrPlayers[matrice[i][1]], ficheroJornada)

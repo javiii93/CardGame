@@ -160,9 +160,7 @@ def comparaAtaqueDefensa(indexCardTurn, ofCard, defCard, defPlayer, arrCardDefPl
     del arrCardDefPlayer[indexCardTurn]
     return dano
 
-
-
-# EJECUCION DE LAS FUNCIONES
+#Funcion ejecutar partida
 def ejecutarPartida(jugador1, jugador2):
     turno = 1
     while jugador1.life > 0 and jugador2.life > 0:
