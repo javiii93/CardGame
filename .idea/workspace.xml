@@ -4,11 +4,13 @@
     <list default="true" id="45c84299-414a-438c-b0f2-a7b1d91ab6a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/CardGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CardGame.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Jornadas/Jornada1" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jornadas/Jornada1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Jornadas/Jornada2" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jornadas/Jornada2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Jornadas/Jornada3" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jornadas/Jornada3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Jornadas/Jornada4" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jornadas/Jornada4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Luchar_jugador_vs_jugador_liga.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Luchar_jugador_vs_jugador_liga.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
